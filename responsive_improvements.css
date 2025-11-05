@@ -1,0 +1,303 @@
+/* MEJORAS DE RESPONSIVIDAD PARA DISPOSITIVOS MÓVILES Y TABLETS */
+/* Agregar este archivo después de los estilos existentes */
+
+/* ========================================
+   MEJORAS GENERALES PARA MÓVIL
+   ======================================== */
+
+/* Tipografía más legible en móviles */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+}
+
+/* Espaciado mejorado para móviles */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/* ========================================
+   HEADER Y NAVEGACIÓN MÓVIL
+   ======================================== */
+
+/* Menú móvil desplegable */
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--primary);
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-menu.active {
+    display: block;
+  }
+
+  .mobile-menu a {
+    display: block;
+    padding: 0.75rem 0;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .mobile-menu a:last-child {
+    border-bottom: none;
+  }
+
+  /* Ocultar navegación desktop en móvil */
+  nav.hidden.md\\:flex {
+    display: none !important;
+  }
+
+  /* Mostrar botón del menú móvil */
+  button.md\\:hidden.text-white {
+    display: block !important;
+  }
+}
+
+/* ========================================
+   CORRECCIONES PARA DESKTOP
+   ======================================== */
+
+/* En desktop (>768px), asegurar que el menú móvil esté oculto */
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none !important;
+  }
+
+  /* Mostrar navegación desktop */
+  nav.hidden.md\\:flex {
+    display: flex !important;
+  }
+
+  /* Ocultar botón del menú móvil */
+  button.md\\:hidden.text-white {
+    display: none !important;
+  }
+}
+
+/* ========================================
+   HERO SECTIONS PARA MÓVIL
+   ======================================== */
+
+@media (max-width: 768px) {
+  .hero-image, .hero-video {
+    height: 50vh;
+    min-height: 300px;
+  }
+
+  .hero-image h2, .hero-video h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-image p, .hero-video p {
+    font-size: 1.1rem;
+  }
+}
+
+/* ========================================
+   FORMULARIO DE CONTACTO MÓVIL
+   ======================================== */
+
+@media (max-width: 768px) {
+  #formulario-contacto .max-w-4xl {
+    margin: 0;
+    padding: 1rem;
+  }
+
+  #formulario-contacto form {
+    padding: 1.5rem;
+  }
+
+  /* Campo de teléfono en móviles */
+  #telefono {
+    font-size: 16px; /* Previene zoom en iOS */
+  }
+
+  /* Select de prefijo más pequeño */
+  #prefijo {
+    min-width: 120px;
+    font-size: 14px;
+  }
+}
+
+/* ========================================
+   GRID DE INFORMACIÓN DE CONTACTO
+   ======================================== */
+
+@media (max-width: 768px) {
+  .grid.grid-cols-1.md\\:grid-cols-2 {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  .contact-card .flex.items-start {
+    align-items: flex-start;
+  }
+
+  .contact-card .bg-primary {
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+}
+
+/* ========================================
+   MAPA RESPONSIVO
+   ======================================== */
+
+@media (max-width: 768px) {
+  .map-container iframe {
+    height: 250px;
+  }
+}
+
+/* ========================================
+   BOTONES DE REDES SOCIALES
+   ======================================== */
+
+@media (max-width: 768px) {
+  .flex.flex-wrap.justify-center.gap-6 {
+    gap: 1rem;
+  }
+
+  .flex.flex-wrap.justify-center.gap-6 a {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* ========================================
+   FAQ RESPONSIVO
+   ======================================== */
+
+@media (max-width: 768px) {
+  .max-w-2xl.mx-auto.space-y-6 > div {
+    padding: 1rem;
+  }
+}
+
+/* ========================================
+   FOOTER MÓVIL
+   ======================================== */
+
+@media (max-width: 768px) {
+  footer .grid.grid-cols-1.md\\:grid-cols-3 {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  footer .flex.flex-col.items-center.md\\:items-start {
+    align-items: center;
+  }
+}
+
+/* ========================================
+   BOTÓN VOLVER ARRIBA PARA MÓVIL
+   ======================================== */
+
+@media (max-width: 768px) {
+  #scrollToTopBtn {
+    bottom: 1rem;
+    right: 1rem;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* ========================================
+   GALERÍA RESPONSIVA MEJORADA
+   ======================================== */
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+}
+
+/* ========================================
+   CARRUSEL PARA TABLETS
+   ======================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .carousel-item img {
+    height: 500px;
+  }
+
+  .hero-image, .hero-video {
+    height: 70vh;
+    min-height: 400px;
+  }
+}
+
+/* ========================================
+   MEJORAS DE ACCESIBILIDAD TÁCTIL
+   ======================================== */
+
+/* Botones más grandes en móviles para mejor usabilidad táctil */
+@media (max-width: 768px) {
+  button, .btn, a[role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Espaciado entre elementos clicables */
+  .nav-link, .card-hover {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ========================================
+   OPTIMIZACIONES DE PERFORMANCE
+   ======================================== */
+
+/* Reduce animaciones en dispositivos móviles para mejor performance */
+@media (max-width: 768px) {
+  * {
+    animation-duration: 0.3s !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.3s !important;
+  }
+}
+
+/* ========================================
+   SOPORTE PARA DIFERENTES ORIENTACIONES
+   ======================================== */
+
+/* Landscape en móviles */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero-image, .hero-video {
+    height: 40vh;
+    min-height: 200px;
+  }
+
+  .carousel-item img {
+    height: 200px;
+  }
+}

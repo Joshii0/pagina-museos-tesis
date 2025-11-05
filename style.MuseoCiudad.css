@@ -1,0 +1,123 @@
+/* HOJA DE ESTILOS DEL MUSEO CIUDAD */
+/* Estilos personalizados para complementar Tailwind CSS y definir la identidad visual del sitio */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* PALETA DE COLORES - Variables CSS personalizadas */
+/* Importancia: Alta - Centraliza la identidad visual del museo */
+:root {
+  --primary: #A52A2A;         /* Color principal - rojo/marrón de las imágenes - Importante para branding */
+  --primary-light: #CD853F;   /* Color claro para acentos (beige rojizo) - Importante para contrastes */
+  --primary-dark: #8B0000;    /* Color oscuro para contrastes - Importante para elementos destacados */
+  --secondary: #460202;       /* Color oscuro para contrastes - Importante para legibilidad */
+  --light: #F5F5DC;           /* Color claro para fondos (beige claro) - Importante para fondos claros */
+  --bg: #FAF0E6;              /* Color de fondo principal (crema) - Importante para atmósfera */
+}
+
+/* CONFIGURACIÓN GLOBAL - Tipografía y colores base */
+/* Importancia: Alta - Establece la identidad visual base del sitio */
+body {
+  font-family: 'Poppins', sans-serif;    /* Fuente moderna para texto general - Importante para legibilidad */
+  background-color: var(--bg);           /* Fondo cálido y acogedor - Importante para atmósfera */
+  color: var(--secondary);               /* Color de texto principal - Importante para contraste */
+}
+
+/* TIPOGRAFÍA - Fuentes para encabezados */
+/* Importancia: Media - Mejora jerarquía visual */
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;  /* Fuente elegante para títulos - Importante para branding */
+}
+
+/* LOGO CIRCULAR */
+/* Importancia: Baja - Redundante, sobreescrito por la regla siguiente */
+.logo-circle {
+  background-image: url(''); /* URL vacía - No tiene importancia */
+  background-size: cover;
+  background-position: center;
+}
+
+/* LOGO - Círculo con gradiente radial */
+/* Importancia: Alta - Elemento distintivo del branding */
+.logo-circle {
+  background: radial-gradient(circle at 30% 30%, #ffe7c4, #A52A2A);
+  /* Gradiente que simula el efecto de luz en la torre histórica - Importante para identidad visual */
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,.25);
+  /* Sombra interna para efecto de profundidad - Importante para realismo */
+}
+
+/* ESTILOS DE COMPONENTES ESPECÍFICOS */
+
+/* HERO SECTION - Imagen de fondo con overlay */
+/* Importancia: Alta - Primera impresión del sitio */
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('ImagenesMuseoCiudad/historia-de-jesus-maria.jpg');
+  /* Overlay oscuro sobre imagen histórica - Importante para legibilidad del texto */
+  background-size: cover; /* Cubre todo el contenedor - Importante para impacto visual */
+  background-position: center; /* Centra la imagen - Importante para composición */
+  position: relative; /* Para posicionar elementos hijos - Importante para layout */
+}
+
+/* NAVEGACIÓN - Efectos hover para enlaces */
+/* Importancia: Media - Mejora interacción del usuario */
+.nav-link {
+  transition: all 0.3s ease;  /* Transición suave para efectos - Importante para UX */
+}
+.nav-link:hover {
+  transform: translateY(-2px);  /* Efecto de elevación al pasar el mouse - Importante para feedback visual */
+}
+
+/* ========================================
+   CARRUSEL - Control de tamaño y apariencia
+   ======================================== */
+/* Importancia: Alta - Presentación de contenido multimedia */
+/* CONTENEDOR PRINCIPAL DEL CARRUSEL */
+.carousel-container {
+  max-height: 100%;  /* Limita la altura máxima del carrusel - Importante para consistencia */
+  min-width: 100%;
+  object-position: center;
+  overflow: hidden;   /* Oculta cualquier contenido que exceda la altura - Importante para layout */
+}
+
+/* IMÁGENES DEL CARRUSEL - Control de tamaño */
+/* Importancia: Alta - Visualización uniforme */
+.carousel-item img {
+  width: 100%; /* corregido - Importante para responsive */
+  height: 700px; /* Altura fija mayor que otros museos - Importante para impacto visual */
+  object-fit: cover; /* Cubre el contenedor - Importante para estética */
+  object-position: center; /* Centra la imagen - Importante para composición */
+}
+
+/* GALERÍA */
+/* Importancia: Alta - Asegura layout responsivo */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Grid que se adapta automáticamente al tamaño de pantalla - Importante para responsive */
+  gap: 1.5rem; /* Espacio entre elementos - Importante para espaciado */
+}
+.gallery-item {
+  overflow: hidden;           /* Evita que el contenido se salga del contenedor - Importante para layout */
+  transition: all 0.3s ease;  /* Transición suave - Importante para UX */
+}
+.gallery-item:hover img {
+  transform: scale(1.05);     /* Zoom sutil al pasar el mouse - Importante para interacción */
+}
+.gallery-item img {
+  transition: transform 0.5s ease;  /* Transición suave para el zoom - Importante para animación */
+}
+
+/* TARJETAS */
+/* Importancia: Media - Mejora interactividad visual */
+.card-hover:hover {
+  transform: translateY(-5px);  /* Elevación más pronunciada - Importante para feedback */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  /* Sombra profunda para efecto de flotación - Importante para profundidad */
+}
+
+/* Para móviles - altura reducida */
+/* Importancia: Alta - Optimización móvil */
+@media (max-width: 768px) {
+  .hero-video {
+    height: 400px; /* Altura reducida para móviles - Importante para performance */
+  }
+}

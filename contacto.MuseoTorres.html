@@ -1,0 +1,326 @@
+<!-- PÁGINA DE CONTACTO - Información de contacto y formulario del Museo Torre Céspedes -->
+<!-- Esta página permite a los usuarios contactar al museo, ver ubicación y consultar FAQ -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- CONFIGURACIÓN DEL DOCUMENTO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto – Museo Torre Céspedes</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="https://jesusmaria.tur.ar/frontend/images/favicon/favicon.ico">
+
+  <!-- ARCHIVOS EXTERNOS -->
+  <!-- Tailwind CSS, AOS para animaciones, Feather para iconos -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="style.MuseoTorres.css">
+  <!-- Mejoras de responsividad -->
+  <link rel="stylesheet" href="responsive_improvements.css">
+</head>
+<body class="flex flex-col min-h-screen">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-[var(--primary)] bg-opacity-95 backdrop-blur-md border-b-4 border-[var(--primary-light)]">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="logo-circle w-10 h-10 rounded-full"></div>
+        <h1 class="text-white text-xl font-bold font-serif">Museo Torre Céspedes</h1>
+      </div>
+      
+      <nav class="hidden md:flex items-center space-x-2">
+        <a href="portal-museos.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Turismo Jesús María</a>
+        <a href="index.MuseoTorres.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Inicio</a>
+        <a href="historia.MuseoTorres.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Historia</a>
+        <a href="agenda.MuseoTorres.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Agenda</a>
+        <a href="contacto.MuseoTorres.html" class="nav-link px-4 py-2 text-white font-semibold bg-white bg-opacity-20 rounded-full">Contacto</a>
+        <span class="text-white px-2">|</span>
+        <a href="" class="nav-link px-3 py-1 text-white text-sm font-medium hover:underline">EN</a>
+      </nav>
+      
+      <!-- Mobile menu button -->
+      <button class="md:hidden text-white">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- CONTENIDO PRINCIPAL DE LA PÁGINA DE CONTACTO -->
+
+    <!-- SECCIÓN HERO - Encabezado de la página de contacto -->
+    <section class="bg-[var(--primary)] text-white py-16">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-4 font-serif" data-aos="fade-up">Contacto</h2>
+        <p class="text-xl max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Visitános, escribinos o seguinos en nuestras redes sociales</p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE INFORMACIÓN DE CONTACTO -->
+    <!-- Grid de dos columnas: información detallada y mapa de ubicación -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- COLUMNA 1: INFORMACIÓN DETALLADA -->
+          <div data-aos="fade-up">
+            <div class="bg-[var(--light)] p-8 rounded-xl shadow-md contact-card h-full">
+              <h3 class="text-2xl font-bold mb-6 text-[var(--primary-dark)] font-serif">Información</h3>
+
+              <!-- LISTA DE INFORMACIÓN DE CONTACTO -->
+              <div class="space-y-4">
+                <!-- DIRECCIÓN -->
+                <div class="flex items-start">
+                  <div class="bg-[var(--primary)] text-white p-2 rounded-full mr-4">
+                    <i data-feather="map-pin" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold mb-1">Dirección</h4>
+                    <p>Cástulo Peña 387, Jesús María, Córdoba</p>
+                  </div>
+                </div>
+
+                <!-- TELÉFONO -->
+                <div class="flex items-start">
+                  <div class="bg-[var(--primary)] text-white p-2 rounded-full mr-4">
+                    <i data-feather="phone" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold mb-1">Teléfono</h4>
+                    <p>(03525) 443773</p>
+                  </div>
+                </div>
+
+                <!-- WHATSAPP -->
+                <div class="flex items-start">
+                  <div class="bg-[var(--primary)] text-white p-2 rounded-full mr-4">
+                    <i data-feather="message-square" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold mb-1">WhatsApp</h4>
+                    <p>3525-539012</p>
+                  </div>
+                </div>
+
+                <!-- EMAIL -->
+                <div class="flex items-start">
+                  <div class="bg-[var(--primary)] text-white p-2 rounded-full mr-4">
+                    <i data-feather="mail" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold mb-1">E-mail</h4>
+                    <p>cultura@jesusmaria.gov.ar</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- HORARIOS DE ATENCIÓN -->
+              <div class="mt-8">
+                <h4 class="font-bold mb-3">Horarios</h4>
+                <div class="space-y-2">
+                  <div class="flex justify-between border-b pb-2">
+                    <span class="font-medium">Lunes a Viernes</span>
+                    <span>09:00–13:00 · 16:00–20:00</span>
+                  </div>
+                  <div class="flex justify-between border-b pb-2">
+                    <span class="font-medium">Sábados</span>
+                    <span>10:00–13:00</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-medium">Domingos</span>
+                    <span>Consultar agenda</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- COLUMNA 2: MAPA DE UBICACIÓN Y TRANSPORTE -->
+          <div data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-[var(--light)] p-8 rounded-xl shadow-md contact-card h-full">
+              <h3 class="text-2xl font-bold mb-6 text-[var(--primary-dark)] font-serif">Cómo llegar</h3>
+
+              <!-- MAPA INTEGRADO DE GOOGLE MAPS -->
+              <div class="map-container mb-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13682.931078009717!2d-64.11587331284181!3d-30.977938800000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943263832d2966c1%3A0xde4540b19b8cb7ac!2sTorre%20Cespedes!5e0!3m2!1ses!2sar!4v1758540024419!5m2!1ses!2sar" class="items-center" ; width="670" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+
+              <!-- INFORMACIÓN DE TRANSPORTE PÚBLICO -->
+              <div class="bg-[var(--primary)] bg-opacity-10 p-4 rounded-lg">
+                <h4 class="font-bold mb-2 text-[var(--primary-black)] text-white">Transporte público</h4>
+                <p class="text-sm text-white">Líneas de colectivo 41, 55 y 71 tienen parada a 100m del museo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="formulario-contacto" class="py-12 bg-[var(--light)]">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-md" data-aos="fade-up">
+          <h3 class="text-2xl font-bold mb-6 text-[var(--primary-dark)] font-serif">¿Te gustaria visitarnos? ¡Escribenos!</h3>
+          
+          <form class="space-y-6" id="form-contacto" autocomplete="off">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
+                  <input type="text" id="nombre" name="nombre" required class="form-input w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-[var(--primary)]">
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                  <input type="email" id="email" name="email" required class="form-input w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-[var(--primary)]">
+                </div>
+              </div>
+              <div>
+                <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">Teléfono *</label>
+                <div class="flex">
+                  <select id="prefijo" name="prefijo" class="px-3 py-2 border border-gray-300 rounded-l-lg focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent" required>
+                    <option value="+54">+54 (Argentina)</option>
+                    <option value="+32">+32 (Bélgica)</option>
+                    <option value="+51">+51 (Perú)</option>
+                    <option value="+52">+52 (México)</option>
+                    <option value="+1">+1 (EE.UU./Canadá)</option>
+                    <option value="+34">+34 (España)</option>
+                    <option value="+39">+39 (Italia)</option>
+                    <option value="+49">+49 (Alemania)</option>
+                    <option value="+55">+55 (Brasil)</option>
+                  </select>
+                  <input type="tel" id="telefono" name="telefono" placeholder="Ej: 9 3525 123456" class="flex-1 px-4 py-2 border-l-0 border border-gray-300 rounded-r-lg focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent" required>
+                </div>
+              </div>
+              <div>
+                <label for="asunto" class="block text-sm font-medium text-gray-700 mb-1">Asunto</label>
+                <input type="text" id="asunto" name="asunto" required class="form-input w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-[var(--primary)]">
+              </div>
+              <div>
+                <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required class="form-input w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"></textarea>
+              </div>
+              <button type="submit" class="px-6 py-3 bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white font-semibold rounded-lg transition w-full">Enviar mensaje</button>
+              <div id="mensaje-contacto" class="mt-4 text-center text-sm font-semibold"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- SECCIÓN DE REDES SOCIALES Y CONTACTO DIRECTO -->
+      <!-- Enlaces directos a WhatsApp y redes sociales para contacto inmediato -->
+      <section class="py-8 bg-[var(--primary)] text-white">
+        <div class="container mx-auto px-4 text-center">
+          <h3 class="text-xl font-bold mb-4 font-serif" data-aos=fade-up>Redes y contacto directo</h3>
+          <!-- BOTONES DE REDES SOCIALES -->
+          <div class="flex flex-wrap justify-center gap-6 mb-4">
+            <a href="https://api.whatsapp.com/send/?phone=5493525539014&text=Hola+estoy+en+la+pagina+web+y+quiero+hacer+una+consulta%21&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="flex items-center gap-2 px-6 py-3 bg-green-500 rounded-full font-semibold hover:bg-green-600 transition" data-aos=fade-up aria-label="WhatsApp directo">
+              <i data-feather="message-circle" class="w-5 h-5"></i> WhatsApp
+            </a>
+            <a href="https://www.facebook.com/torrecespedes/mentions?locale=es_LA" target="_blank" rel="noopener" class="flex items-center gap-2 px-6 py-3 bg-blue-600 rounded-full font-semibold hover:bg-blue-700 transition" data-aos=fade-up aria-label="Facebook">
+              <i data-feather="facebook" class="w-5 h-5"></i> Facebook
+            </a>
+            <a href="https://www.instagram.com/turismojesusmaria?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" class="flex items-center gap-2 px-6 py-3 bg-pink-500 rounded-full font-semibold hover:bg-pink-600 transition" data-aos=fade-up aria-label="Instagram">
+              <i data-feather="instagram" class="w-5 h-5"></i> Instagram
+            </a>
+          </div>
+          <p class="text-sm" data-aos=fade-up>También podés escribirnos por email: <a href="mailto:turismo@jesusmaria.gov.ar" class="underline" data-aos=fade-up>turismo@jesusmaria.gov.ar</a></p>
+        </div>
+      </section>
+
+      <!-- SECCIÓN DE PREGUNTAS FRECUENTES (FAQ) -->
+      <!-- Respuestas a las consultas más comunes de los visitantes -->
+      <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+          <h3 class="text-2xl font-bold mb-8 text-center text-[var(--primary-dark)] font-serif" data-aos=fade-up>Preguntas Frecuentes (FAQ)</h3>
+          <!-- LISTA DE PREGUNTAS FRECUENTES -->
+          <div class="max-w-2xl mx-auto space-y-6">
+            <!-- FAQ 1: HORARIOS -->
+            <div class="bg-[var(--light)] p-6 rounded-xl shadow-md" data-aos=fade-up>
+              <h4 class="font-bold mb-2">¿Cuál es el horario de atención?</h4>
+              <p>Lunes a viernes de 09:00 a 13:00 y de 16:00 a 20:00. Sábados de 10:00 a 13:00.</p>
+            </div>
+            <!-- FAQ 2: ENTRADA GRATUITA -->
+            <div class="bg-[var(--light)] p-6 rounded-xl shadow-md" data-aos=fade-up>
+              <h4 class="font-bold mb-2">¿La entrada es gratuita?</h4>
+              <p>Sí, la entrada al museo es libre y gratuita.</p>
+            </div>
+            <!-- FAQ 3: VISITAS GUIADAS -->
+            <div class="bg-[var(--light)] p-6 rounded-xl shadow-md" data-aos=fade-up>
+              <h4 class="font-bold mb-2">¿Hay visitas guiadas?</h4>
+              <p>Sí, podés coordinar visitas guiadas para grupos escribiendo por WhatsApp o email.</p>
+            </div>
+            <!-- FAQ 4: ACCESIBILIDAD -->
+            <div class="bg-[var(--light)] p-6 rounded-xl shadow-md" data-aos=fade-up>
+              <h4 class="font-bold mb-2">¿El museo es accesible para personas con movilidad reducida?</h4>
+              <p>El museo cuenta con accesos adaptados y personal para asistencia.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    </body>
+  </html>
+            </div>
+          </form>
+
+  <!-- PIE DE PÁGINA - Información de contacto y enlaces -->
+  <footer class="bg-[var(--primary-dark)] text-white py-8 border-t-4 border-[var(--primary-light)]">
+    
+    <!-- BOTÓN VOLVER ARRIBA - Se muestra cuando se hace scroll hacia abajo -->
+    <button id="scrollToTopBtn" aria-label="Volver arriba" class="fixed bottom-6 right-6 z-50 bg-[var(--primary)] text-white p-3 rounded-full shadow-lg hover:bg-[var(--primary-dark)] transition hidden">
+      <i data-feather="arrow-up"></i>
+    </button>
+    <div class="container mx-auto px-4">
+      <!-- GRID DE TRES COLUMNAS - Información, redes sociales y copyright -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- COLUMNA 1: INFORMACIÓN DEL MUSEO -->
+        <div>
+          <h4 class="text-lg font-bold mb-4 font-serif">Museo Torre Céspedes</h4>
+          <div class="space-y-2">
+            <div class="flex items-center">
+              <i data-feather="map-pin" class="mr-2"></i>
+              <span>Cástulo Peña 387, Jesús María, Córdoba</span>
+            </div>
+            <div class="flex items-center">
+              <i data-feather="phone" class="mr-2"></i>
+              <span>(03525) 443773 · WhatsApp: 3525-539012</span>
+            </div>
+            <div class="flex items-center">
+              <i data-feather="mail" class="mr-2"></i>
+              <span>turismo@jesusmaria.gov.ar</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMNA 2: REDES SOCIALES -->
+        <div class="flex flex-col items-center md:items-start">
+          <h4 class="text-lg font-bold mb-4 font-serif">Seguinos</h4>
+          <div class="flex space-x-4">
+            <a href="https://www.facebook.com/torrecespedes/mentions?locale=es_LA" target="_blank" class="hover:text-[var(--primary-light)] transition">
+              <i data-feather="facebook" class="w-6 h-6"></i>
+            </a>
+            <a href="https://www.instagram.com/turismojesusmaria?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:text-[var(--primary-light)] transition">
+              <i data-feather="instagram" class="w-6 h-6"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- COLUMNA 3: COPYRIGHT -->
+        <div class="text-center md:text-right">
+          <p>© 2025 Museo Torre Céspedes · Jesús María</p>
+          <p class="text-sm text-[var(--primary-light)] mt-2">Sitio web realizado por el área de Cultura</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    AOS.init();
+    feather.replace();
+  </script>
+<script src="mobile_menu.js"></script>
+<script src="script.MuseoTorres.js"></script>
+
+</body>
+</html>

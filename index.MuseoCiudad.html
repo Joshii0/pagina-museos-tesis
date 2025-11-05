@@ -1,0 +1,295 @@
+<!-- DOCUMENTO HTML PRINCIPAL - Página de inicio del Museo de la Ciudad Luis Biondi -->
+<!-- Este archivo contiene la estructura principal del sitio web del museo, incluyendo navegación, contenido principal y footer -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- CONFIGURACIÓN BÁSICA DEL DOCUMENTO -->
+  <!-- Define la codificación de caracteres, configuración responsive y metadatos para SEO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Museo de la Ciudad Luis Biondi – Jesús María</title>
+  <!-- Favicon - Ícono que aparece en la pestaña del navegador -->
+  <link rel="icon" type="image/x-icon" href="https://jesusmaria.tur.ar/frontend/images/favicon/favicon.ico">
+  <meta name="description" content="Museo de la Ciudad Luis Biondi de Jesús María, Córdoba. Historia local, patrimonio y agenda cultural.">
+
+  <!-- ETIQUETAS META PARA SEO Y REDES SOCIALES - Importantes para el posicionamiento en buscadores y apariencia en redes -->
+  <meta property="og:title" content="Museo de la Ciudad Luis Biondi – Jesús María" />
+  <meta property="og:description" content="Museo de la Ciudad Luis Biondi de Jesús María, Córdoba. Historia local, patrimonio y agenda cultural." />
+  <meta property="og:image" content="ImagenesMuseoCiudad/historia-de-jesus-maria.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.luisbiondi.com.ar/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Museo de la Ciudad Luis Biondi – Jesús María" />
+  <meta name="twitter:description" content="Museo de la Ciudad Luis Biondi de Jesús María, Córdoba. Historia local, patrimonio y agenda cultural." />
+  <meta name="twitter:image" content="ImagenesMuseoCiudad/historia-de-jesus-maria.jpg" />
+
+  <!-- ARCHIVOS EXTERNOS - Librerías CSS y JS necesarias para el funcionamiento del sitio -->
+  <!-- Tailwind CSS para estilos rápidos, AOS para animaciones, Feather para iconos -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <link rel="stylesheet" href="style.MuseoCiudad.css">
+  <!-- Mejoras de responsividad -->
+  <link rel="stylesheet" href="responsive_improvements.css">
+</head>
+<body class="flex flex-col min-h-screen">
+  <!-- CUERPO PRINCIPAL DEL DOCUMENTO -->
+  <!-- Estructura flexbox que asegura que el footer esté siempre abajo -->
+
+  <!-- ENCABEZADO - Header sticky con navegación -->
+  <!-- Se mantiene fijo en la parte superior durante el scroll -->
+  <header class="sticky top-0 z-50 bg-[var(--primary)] bg-opacity-95 backdrop-blur-md border-b-4 border-[var(--primary-light)]">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- LOGO Y TÍTULO DEL MUSEO -->
+      <div class="flex items-center space-x-3">
+        <div class="logo-circle w-10 h-10 rounded-full"></div>
+        <h1 class="text-white text-xl font-bold font-serif">Museo de la Ciudad Luis Biondi</h1>
+      </div>
+      <!-- NAVEGACIÓN PRINCIPAL - Visible solo en desktop -->
+      <nav class="hidden md:flex items-center space-x-2">
+        <a href="portal-museos.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Turismo Jesús María</a>
+        <a href="index.MuseoCiudad.html" class="nav-link px-4 py-2 text-white font-semibold rounded-full bg-white bg-opacity-20">Inicio</a>
+        <a href="historia.MuseoCiudad.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Historia</a>
+        <a href="agenda.MuseoCiudad.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Agenda</a>
+        <a href="contacto.MuseoCiudad.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Contacto</a>
+        <span class="text-white px-2">|</span>
+        <a href="" class="nav-link px-3 py-1 text-white text-sm font-medium hover:underline">EN</a>
+      </nav>
+      <!-- BOTÓN DE MENÚ MÓVIL - Solo visible en dispositivos pequeños -->
+      <button class="md:hidden text-white">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- CONTENIDO PRINCIPAL - Se expande para ocupar el espacio disponible -->
+
+    <!-- SECCIÓN HERO - Imagen de fondo con texto de bienvenida -->
+    <!-- Esta es la primera sección que ven los visitantes, con imagen de fondo y llamado a acción -->
+    <section class="hero-image relative h-96 flex items-center justify-center text-white overflow-hidden">
+      <!-- OVERLAY OSCURO - Para mejorar la legibilidad del texto sobre la imagen -->
+      <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+      <!-- CONTENIDO DEL HERO - Centrado y con animación de aparición -->
+      <div class="container mx-auto px-4 z-10 text-center" data-aos="fade-up">
+        <span class="inline-block px-3 py-1 mb-4 text-sm font-semibold bg-white text-[var(--primary-dark)] rounded-full">Jesús María · Córdoba</span>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 font-serif">Bienvenidos al Museo de la Ciudad Luis Biondi</h2>
+        <p class="text-xl max-w-2xl mx-auto mb-8">Un espacio que conserva la historia y el patrimonio cultural de nuestra ciudad. Descubrí sus exposiciones y participá de sus actividades.</p>
+        <!-- BOTONES DE ACCIÓN - Enlaces a secciones principales del sitio -->
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="historia.MuseoCiudad.html" class="px-6 py-3 bg-[var(--primary-dark)] hover:bg-[var(--primary)] text-white font-semibold rounded-lg transition-all">Nuestra historia</a>
+          <a href="agenda.MuseoCiudad.html" class="px-6 py-3 bg-white hover:bg-gray-100 text-[var(--primary-dark)] font-semibold rounded-lg transition-all">Agenda cultural</a>
+          <a href="contacto.MuseoCiudad.html" class="px-6 py-3 border-2 border-white hover:bg-white hover:bg-opacity-20 text-white font-semibold rounded-lg transition-all">Visítanos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE TESTIMONIOS - Comentarios de visitantes -->
+    <!-- Muestra opiniones reales de personas que han visitado el museo -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <h3 class="text-2xl font-bold mb-8 text-center text-[var(--primary-dark)] font-serif" data-aos="fade-up">Testimonios de visitantes</h3>
+        <!-- GRID RESPONSIVO - 1 columna en móvil, 3 en desktop -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- TESTIMONIO 1 -->
+          <div class="bg-[var(--light)] p-6 rounded-xl shadow-md" data-aos="fade-up">
+            <p class="text-lg italic mb-4">“Un lugar lleno de historia y cultura local. La visita fue muy enriquecedora.”</p>
+            <div class="flex items-center gap-3">
+              <img src="ImagenesMuseoCiudad/Fwha4srWYAU7i6y.jpg" alt="Visitante 1" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <span class="font-bold">Ana L.</span><br>
+                <span class="text-sm text-gray-600">Jesús María</span>
+              </div>
+            </div>
+          </div>
+          <!-- TESTIMONIO 2 -->
+          <div class="bg-[var(--light)] p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+            <p class="text-lg italic mb-4">“Excelente museo, me encantó la exposición permanente.”</p>
+            <div class="flex items-center gap-3">
+              <img src="ImagenesMuseoCiudad/Fwha4WlWAAYhpKC.jpg" alt="Visitante 2" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <span class="font-bold">Miguel P.</span><br>
+                <span class="text-sm text-gray-600">Córdoba</span>
+              </div>
+            </div>
+          </div>
+          <!-- TESTIMONIO 3 -->
+          <div class="bg-[var(--light)] p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+            <p class="text-lg italic mb-4">“Actividades muy completas y personal amable. ¡Recomendado!”</p>
+            <div class="flex items-center gap-3">
+              <img src="ImagenesMuseoCiudad/DSC_4234.jpg" alt="Visitante 3" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <span class="font-bold">Laura R.</span><br>
+                <span class="text-sm text-gray-600">Villa del Totoral</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE IMAGEN DESTACADA -->
+    <!-- Imagen estática del museo -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4" data-aos="fade-up">
+        <!-- CONTENEDOR DE LA IMAGEN -->
+        <div class="rounded-xl shadow-lg overflow-hidden">
+          <img src="ImagenesMuseoCiudad/gallery-wide_museo-de-la-ciudad-1462.jpg" alt="Vista exterior del museo" class="w-full h-768px" aria-label="Vista exterior del museo">
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE TARJETAS INFORMATIVAS -->
+    <!-- Tres tarjetas que resumen los aspectos principales del museo: edificio, agenda y patrimonio -->
+    <section class="py-12 bg-[var(--light)]">
+      <div class="container mx-auto px-4">
+        <!-- GRID RESPONSIVO - 1 columna en móvil, 3 en desktop -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up">
+
+          <!-- TARJETA 1: Edificio histórico -->
+          <div class="bg-white p-6 rounded-xl shadow-md transition-all duration-300 card-hover">
+            <h3 class="text-xl font-bold mb-3 text-[var(--primary-dark)] font-serif">Historia Viva</h3>
+            <p class="text-gray-700">
+              Una casona de principios del siglo XX, de estilo italianizante, que conserva pisos, techos y aberturas originales. Hoy es sede del museo.
+            </p>
+          </div>
+
+          <!-- TARJETA 2: Agenda cultural -->
+          <div class="bg-white p-6 rounded-xl shadow-md transition-all duration-300 card-hover">
+            <h3 class="text-xl font-bold mb-3 text-[var(--primary-dark)] font-serif">Agenda cultural</h3>
+            <p class="text-gray-700">
+              Exposiciones permanentes y temporales, charlas, talleres y conciertos que convierten al museo en un espacio activo y comunitario.
+            </p>
+          </div>
+
+          <!-- TARJETA 3: Patrimonio documental -->
+          <div class="bg-white p-6 rounded-xl shadow-md transition-all duration-300 card-hover">
+            <h3 class="text-xl font-bold mb-3 text-[var(--primary-dark)] font-serif">Archivo y patrimonio</h3>
+            <p class="text-gray-700">
+              El museo resguarda el archivo documental local y colecciones que narran la historia de Jesús María desde sus orígenes hasta la actualidad.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECCIÓN DE GALERÍA DE IMÁGENES -->
+    <!-- Grid responsivo con fotos del museo para mostrar diferentes vistas -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <!-- GRID DE GALERÍA - Se adapta al número de imágenes -->
+        <div class="gallery-grid">
+          <!-- IMAGEN 1 -->
+          <div class="gallery-item rounded-xl overflow-hidden shadow-md" data-aos="fade-up">
+            <img src="ImagenesMuseoCiudad/Fwha4srWYAU7i6y.jpg" alt="Vista exterior del museo" class="w-full h-full object-cover" aria-label="Vista exterior del museo">
+          </div>
+          <!-- IMAGEN 2 -->
+          <div class="gallery-item rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+            <img src="ImagenesMuseoCiudad/Fwha4WlWAAYhpKC.jpg" alt="Detalle arquitectónico del museo" class="w-full h-full object-cover" aria-label="Detalle arquitectónico del museo">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE HORARIOS Y VISITAS -->
+    <!-- Información práctica para visitantes: horarios de apertura y detalles sobre visitas -->
+    <section class="py-12 bg-[var(--light)]">
+      <div class="container mx-auto px-4">
+        <!-- GRID RESPONSIVO - 1 columna en móvil, 2 en desktop -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up">
+
+          <!-- TARJETA DE HORARIOS -->
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="text-xl font-bold mb-4 text-[var(--primary-dark)] font-serif">Horarios</h3>
+            <!-- LISTA DE HORARIOS -->
+            <div class="space-y-3">
+              <div class="flex justify-between border-b pb-2">
+                <span class="font-medium">Miércoles a Domingos</span>
+                <span>15:00 – 19:00</span>
+              </div>
+              <div class="flex justify-between border-b pb-2">
+                <span class="font-medium">Sábados</span>
+                <span>10:00 – 12:00 · 15:00 – 19:00</span>
+              </div>
+            </div>
+            <p class="text-sm text-gray-500 mt-4">Los horarios pueden variar en caso de actividades especiales.</p>
+          </div>
+
+          <!-- TARJETA DE VISITAS -->
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="text-xl font-bold mb-4 text-[var(--primary-dark)] font-serif">Visitas</h3>
+            <p class="mb-6">
+              La entrada es <strong>libre y gratuita</strong>. Para grupos escolares o visitas guiadas, se recomienda coordinar con anticipación.
+            </p>
+            <!-- BOTÓN PARA COORDINAR VISITA -->
+            <a href="contacto.MuseoCiudad.html#formulario-contacto" class="inline-block px-6 py-2 bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white font-semibold rounded-lg transition">
+              Coordinar visita
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PIE DE PÁGINA - Footer con información de contacto y redes sociales -->
+    <footer class="bg-[var(--primary-dark)] text-white py-8 border-t-4 border-[var(--primary-light)]">
+      <!-- BOTÓN VOLVER ARRIBA - Se muestra cuando se hace scroll hacia abajo -->
+      <button id="scrollToTopBtn" aria-label="Volver arriba" class="fixed bottom-6 right-6 z-50 bg-[var(--primary)] text-white p-3 rounded-full shadow-lg hover:bg-[var(--primary-dark)] transition hidden">
+        <i data-feather="arrow-up"></i>
+      </button>
+
+      <div class="container mx-auto px-4">
+        <!-- GRID RESPONSIVO - 1 columna en móvil, 3 en desktop -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <!-- COLUMNA 1: Información del museo -->
+          <div>
+            <h4 class="text-lg font-bold mb-4 font-serif">Museo de la Ciudad Luis Biondi</h4>
+            <!-- DATOS DE CONTACTO -->
+            <div class="space-y-2">
+              <div class="flex items-center">
+                <i data-feather="map-pin" class="mr-2"></i>
+                <span>Ingeniero Olmos 453, Jesús María, Córdoba</span>
+              </div>
+              <div class="flex items-center">
+                <i data-feather="phone" class="mr-2"></i>
+                <span>(03525) 443760 · WhatsApp: +54 9 3525 539012</span>
+              </div>
+              <div class="flex items-center">
+                <i data-feather="mail" class="mr-2"></i>
+                <span>turismo@jesusmaria.gov.ar</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- COLUMNA 2: Redes sociales -->
+          <div class="flex flex-col items-center md:items-start">
+            <h4 class="text-lg font-bold mb-4 font-serif">Seguinos</h4>
+            <!-- ENLACES A REDES SOCIALES -->
+            <div class="flex space-x-4">
+              <a href="https://www.facebook.com/museodelaciudad.luisbiondi/?locale=es_LA" target="_blank" class="hover:text-[var(--primary-light)] transition">
+                <i data-feather="facebook" class="w-6 h-6"></i>
+              </a>
+              <a href="https://www.instagram.com/explore/locations/1008940069/museo-de-la-ciudad-luis-biondi/" target="_blank" class="hover:text-[var(--primary-light)] transition">
+                <i data-feather="instagram" class="w-6 h-6"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- COLUMNA 3: Créditos -->
+          <div class="text-center md:text-right">
+            <p>© 2025 Museo de la Ciudad Luis Biondi · Jesús María</p>
+            <p class="text-sm text-[var(--primary-light)] mt-2">Sitio web realizado por el Área de Cultura de Jesús María</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+<script src="mobile_menu.js"></script>
+<script src="script.MuseoCiudad.js"></script>
+</body>
+</html>

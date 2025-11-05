@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Formulario Contacto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+        <h1 class="text-2xl font-bold mb-6 text-center">Prueba Formulario de Contacto</h1>
+
+        <form id="form-contacto" class="space-y-4">
+            <div>
+                <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div>
+                <label for="asunto" class="block text-sm font-medium text-gray-700 mb-1">Asunto</label>
+                <input type="text" id="asunto" name="asunto" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div>
+                <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md transition duration-200">
+                Enviar Mensaje
+            </button>
+
+            <div id="mensaje-contacto" class="mt-4 text-center text-sm font-semibold"></div>
+        </form>
+    </div>
+
+    <script>
+        // FUNCIONALIDAD DEL FORMULARIO DE CONTACTO
+        const formContacto = document.getElementById('form-contacto');
+        const mensajeContacto = document.getElementById('mensaje-contacto');
+
+        if (formContacto) {
+            formContacto.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const formData = new FormData(formContacto);
+                const data = {
+                    nombre: formData.get('nombre'),
+                    email: formData.get('email'),
+                    asunto: formData.get('asunto'),
+                    mensaje: formData.get('mensaje'),
+                    museo: 'TestMuseo'
+                };
+
+                if (!data.nombre || !data.email || !data.asunto || !data.mensaje) {
+                    mostrarMensaje('Por favor, complete todos los campos.', 'error');
+                    return;
+                }
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(data.email)) {
+                    mostrarMensaje('Por favor, ingrese un email válido.', 'error');
+                    return;
+                }
+
+                try {
+                    mostrarMensaje('Enviando mensaje...', 'info');
+
+                    const response = await fetch('http://localhost:5000/contacto', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(data)
+                    });
+
+                    const result = await response.json();
+
+                    if (result.success) {
+                        mostrarMensaje('¡Mensaje enviado correctamente! Gracias por contactarnos.', 'success');
+                        formContacto.reset();
+                    } else {
+                        mostrarMensaje(result.message || 'Error al enviar el mensaje.', 'error');
+                    }
+                } catch (error) {
+                    mostrarMensaje('Error de conexión. Por favor, inténtelo más tarde.', 'error');
+                    console.error('Error:', error);
+                }
+            });
+        }
+
+        function mostrarMensaje(texto, tipo) {
+            if (mensajeContacto) {
+                mensajeContacto.className = 'mt-4 text-center text-sm font-semibold';
+
+                if (tipo === 'success') {
+                    mensajeContacto.classList.add('text-green-600');
+                } else if (tipo === 'error') {
+                    mensajeContacto.classList.add('text-red-600');
+                } else if (tipo === 'info') {
+                    mensajeContacto.classList.add('text-blue-600');
+                }
+
+                mensajeContacto.textContent = texto;
+
+                if (tipo !== 'info') {
+                    setTimeout(() => {
+                        mensajeContacto.textContent = '';
+                    }, 5000);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

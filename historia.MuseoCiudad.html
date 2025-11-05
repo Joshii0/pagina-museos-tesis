@@ -1,0 +1,383 @@
+<!-- PÁGINA DE HISTORIA - Museo de la Ciudad Luis Biondi -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- CONFIGURACIÓN BÁSICA DEL DOCUMENTO -->
+  <!-- Define la codificación, viewport y título -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia – Museo de la Ciudad Luis Biondi</title>
+  <!-- Ícono favicon para pestaña del navegador -->
+  <link rel="icon" type="image/x-icon" href="https://jesusmaria.tur.ar/frontend/images/favicon/favicon.ico">
+
+  <!-- LIBRERÍAS EXTERNAS -->
+  <!-- Tailwind CSS para estilos rápidos -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS para animaciones al hacer scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Feather Icons para iconos SVG -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <!-- Estilos personalizados del museo -->
+  <link rel="stylesheet" href="style.MuseoCiudad.css">
+  <!-- Mejoras de responsividad -->
+  <link rel="stylesheet" href="responsive_improvements.css">
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- ENCABEZADO - Header sticky con navegación -->
+  <!-- Se mantiene fijo en la parte superior durante el scroll -->
+  <header class="sticky top-0 z-50 bg-[var(--primary)] bg-opacity-95 backdrop-blur-md border-b-4 border-[var(--primary-light)]">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Logo circular y título del museo -->
+      <div class="flex items-center space-x-3">
+        <div class="logo-circle w-10 h-10 rounded-full"></div>
+        <h1 class="text-white text-xl font-bold font-serif">Museo de la Ciudad Luis Biondi</h1>
+      </div>
+      
+      <!-- Navegación principal visible en desktop -->
+      <nav class="hidden md:flex items-center space-x-2">
+        <a href="portal-museos.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Turismo Jesús María</a>
+        <a href="index.MuseoCiudad.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Inicio</a>
+        <a href="historia.MuseoCiudad.html" class="nav-link px-4 py-2 text-white font-semibold bg-white bg-opacity-20 rounded-full">Historia</a>
+        <a href="agenda.MuseoCiudad.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Agenda</a>
+        <a href="contacto.MuseoCiudad.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Contacto</a>
+        <span class="text-white px-2">|</span>
+        <a href="" class="nav-link px-3 py-1 text-white text-sm font-medium hover:underline">EN</a>
+      </nav>
+      
+      <!-- Botón menú móvil visible en dispositivos pequeños -->
+      <button class="md:hidden text-white">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- Hero -->
+    <section class="bg-[var(--primary)] text-white py-16">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-4 font-serif" data-aos="fade-up">Nuestra Historia</h2>
+        <p class="text-xl max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Descubrí la historia del Museo de la Ciudad Luis Biondi, ícono cultural de Jesús María
+        </p>
+      </div>
+    </section>
+
+    <!-- Orígenes -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto bg-[var(--light)] p-8 rounded-xl shadow-md" data-aos="fade-up">
+          <h3 class="text-2xl font-bold mb-6 text-[var(--primary-dark)] font-serif">Orígenes</h3>
+          <p class="mb-6">
+             El Museo de la Ciudad Luis Biondi abrió sus puertas en <strong>2012.</strong> Está ubicado en la calle <strong>Ingeniero Olmos 453</strong> y ocupa una casona histórica de principios del siglo XX, que conserva pisos, aberturas y techos originales. 
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <img src="ImagenesMuseoCiudad/historia-de-jesus-maria.jpg" alt="Museo Luis Biondi" class="h-full w-full rounded-lg shadow-md">
+            </div>
+            <div>
+              <img src="ImagenesMuseoCiudad/DSC_4234.jpg" alt="Museo Luis Biondi" class="h-full w-full rounded-lg shadow-md">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Línea de tiempo corregida para Museo de la Ciudad Luis Biondi -->
+<section class="py-12 bg-[var(--light)]">
+  <div class="container mx-auto px-4">
+    <h3 class="text-2xl font-bold mb-8 text-center text-[var(--primary-dark)] font-serif" data-aos="fade-up">
+      Línea de Tiempo
+    </h3>
+    <div class="relative max-w-4xl mx-auto">
+      <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-[var(--primary-light)] transform -translate-x-1/2"></div>
+      <div class="space-y-12">
+        <!-- Fundación del museo -->
+        <div class="relative timeline-item" data-aos="fade-up">
+          <div class="bg-white p-6 rounded-xl shadow-md md:w-5/12 ml-auto">
+            <div class="flex items-center mb-2">
+              <span class="w-8 h-8 rounded-full bg-[var(--primary-light)] flex items-center justify-center mr-3" aria-label="Creación">
+                <i data-feather="book" class="w-5 h-5" aria-hidden="true"></i>
+              </span>
+              <div class="w-4 h-4 rounded-full bg-[var(--primary)] absolute left-1/2 transform -translate-x-1/2"></div>
+              <h4 class="text-xl font-bold text-[var(--primary-dark)] font-serif">2012</h4>
+            </div>
+            <p>
+              Se crea oficialmente el Museo de la Ciudad Luis Biondi por Ordenanza N° 3245/2012, para preservar el patrimonio cultural de Jesús María.
+            </p>
+          </div>
+        </div>
+
+        <!-- Edificio histórico / arquitectura original -->
+        <div class="relative timeline-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-white p-6 rounded-xl shadow-md md:w-5/12">
+            <div class="flex items-center mb-2">
+              <span class="w-8 h-8 rounded-full bg-[var(--primary-light)] flex items-center justify-center mr-3" aria-label="Edificio">
+                <i data-feather="home" class="w-5 h-5" aria-hidden="true"></i>
+              </span>
+              <div class="w-4 h-4 rounded-full bg-[var(--primary)] absolute left-1/2 transform -translate-x-1/2"></div>
+              <h4 class="text-xl font-bold text-[var(--primary-dark)] font-serif">Siglo XIX / XX</h4>
+            </div>
+            <p>
+              La casona que alberga el museo data de fines del siglo XIX o principios del XX. Conserva pisos, aberturas y techos originales, y su diseño corresponde al estilo italianizante.  
+            </p>
+          </div>
+        </div>
+
+        <!-- Ordenanza simbólica / conmemoración -->
+        <div class="relative timeline-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="bg-white p-6 rounded-xl shadow-md md:w-5/12 ml-auto">
+            <div class="flex items-center mb-2">
+              <span class="w-8 h-8 rounded-full bg-[var(--primary-light)] flex items-center justify-center mr-3" aria-label="Ordenanza">
+                <i data-feather="clipboard" class="w-5 h-5" aria-hidden="true"></i>
+              </span>
+              <div class="w-4 h-4 rounded-full bg-[var(--primary)] absolute left-1/2 transform -translate-x-1/2"></div>
+              <h4 class="text-xl font-bold text-[var(--primary-dark)] font-serif">2015</h4>
+            </div>
+            <p>
+              Por Ordenanza N° 3581 del 12 de noviembre de 2015, el Concejo Deliberante estableció que el 15 de enero quede como fecha conmemorativa vinculada al museo.  
+            </p>
+          </div>
+        </div>
+
+        <!-- Actualidad / actividades -->
+        <div class="relative timeline-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="bg-white p-6 rounded-xl shadow-md md:w-5/12">
+            <div class="flex items-center mb-2">
+              <span class="w-8 h-8 rounded-full bg-[var(--primary-light)] flex items-center justify-center mr-3" aria-label="Actualidad">
+                <i data-feather="activity" class="w-5 h-5" aria-hidden="true"></i>
+              </span>
+              <div class="w-4 h-4 rounded-full bg-[var(--primary)] absolute left-1/2 transform -translate-x-1/2"></div>
+              <h4 class="text-xl font-bold text-[var(--primary-dark)] font-serif">Actualidad</h4>
+            </div>
+            <p>
+              Hoy el museo continúa activo con exposiciones, talleres y visitas guiadas. Sus salas muestran la historia local desde los pueblos originarios hasta las instituciones contemporáneas.  
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Galería Histórica -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <h3 class="text-2xl font-bold mb-8 text-center text-[var(--primary-dark)] font-serif" data-aos="fade-up">Galería Histórica</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" role="list">
+          <figure class="bg-[var(--light)] rounded-xl shadow-md overflow-hidden" role="listitem">
+            <img src="ImagenesMuseoCiudad/gallery-wide_museo-de-la-ciudad-1462.jpg" alt="Vista histórica del Museo" class="w-full h-64 object-cover" data-aos=fade-up loading="lazy">
+            <figcaption class="p-4 text-center text-[var(--primary-dark)] text-sm">Museo Luis Biondi, fachada principal</figcaption>
+          </figure>
+          <figure class="bg-[var(--light)] rounded-xl shadow-md overflow-hidden" role="listitem">
+            <img src="ImagenesMuseoCiudad/Fwha4WlWAAYhpKC.jpg" alt="Exposición histórica" class="w-full h-64 object-cover" data-aos=fade-up loading="lazy">
+            <figcaption class="p-4 text-center text-[var(--primary-dark)] text-sm">Exposición histórica</figcaption>
+          </figure>
+          <figure class="bg-[var(--light)] rounded-xl shadow-md overflow-hidden" role="listitem">
+            <img src="ImagenesMuseoCiudad/Fwha4srWYAU7i6y.jpg" alt="Archivo fotográfico" class="w-full h-64 object-cover" data-aos=fade-up loading="lazy">
+            <figcaption class="p-4 text-center text-[var(--primary-dark)] text-sm">Archivo fotográfico</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECURSOS EXTERNOS -->
+<section class="py-12 bg-[var(--light)]">
+  <div class="container mx-auto px-4">
+    <h3 class="text-2xl font-bold mb-8 text-center text-[var(--primary-dark)] font-serif" data-aos="fade-up">Recursos Culturales</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up">
+      
+      <!-- Archivo documental -->
+      <div class="bg-white p-6 rounded-xl shadow-md text-center">
+        <i data-feather="book" class="w-12 h-12 text-[var(--primary)] mx-auto mb-4"></i>
+        <h4 class="text-xl font-bold mb-2 text-[var(--primary-dark)] font-serif">Archivo Documental</h4>
+        <p class="text-gray-700 mb-4">
+          El museo resguarda documentos, registros y fotografías históricas de Jesús María, disponibles para consulta en sala.
+        </p>
+      </div>
+
+      <!-- Actividades culturales -->
+      <div class="bg-white p-6 rounded-xl shadow-md text-center">
+        <i data-feather="users" class="w-12 h-12 text-[var(--primary)] mx-auto mb-4"></i>
+        <h4 class="text-xl font-bold mb-2 text-[var(--primary-dark)] font-serif">Actividades</h4>
+        <p class="text-gray-700 mb-4">
+          Se organizan charlas, capacitaciones y pequeños conciertos en el auditorio del museo.
+        </p>
+      </div>
+
+      <!-- Enlaces relacionados -->
+      <div class="bg-white p-6 rounded-xl shadow-md text-center">
+        <i data-feather="link" class="w-12 h-12 text-[var(--primary)] mx-auto mb-4"></i>
+        <h4 class="text-xl font-bold mb-2 text-[var(--primary-dark)] font-serif">Enlaces Relacionados</h4>
+        <p class="text-gray-700 mb-4">
+          Conectá con otras instituciones culturales de Jesús María y la región.
+        </p>
+        <a href="https://jesusmaria.tur.ar/paseos-y-actividades.html" target="_blank" class="inline-block px-4 py-2 bg-[var(--primary)] text-white font-semibold rounded-lg hover:bg-[var(--primary-dark)] transition">
+          Ver más museos
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- TESTIMONIOS DE EXPERTOS -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <h3 class="text-2xl font-bold mb-8 text-center text-[var(--primary-dark)] font-serif" data-aos="fade-up">Testimonios de Expertos</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-[var(--light)] p-6 rounded-xl shadow-md" data-aos="fade-up">
+            <div class="flex items-start gap-4">
+              <img src="Perfiles/images.jpg" alt="Dr. Carlos Mendoza" class="w-16 h-16 rounded-full object-cover">
+              <div>
+                <h4 class="text-lg font-bold text-[var(--primary-dark)] font-serif">Dr. Carlos Mendoza</h4>
+                <p class="text-sm text-gray-600 mb-2">Historiador y profesor universitario</p>
+                <p class="text-gray-700 italic">"El Museo Luis Biondi es un referente invaluable para entender la historia local. Su colección refleja perfectamente la evolución de Jesús María."</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[var(--light)] p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-start gap-4">
+              <img src="Perfiles/463fd8ec102ac05e2445fed2d373aae7.jpeg" alt="Lic. Ana García" class="w-16 h-16 rounded-full object-cover">
+              <div>
+                <h4 class="text-lg font-bold text-[var(--primary-dark)] font-serif">Lic. Ana García</h4>
+                <p class="text-sm text-gray-600 mb-2">Arquitecta y conservadora</p>
+                <p class="text-gray-700 italic">"La preservación del patrimonio cultural que realiza este museo es excepcional. Cada visita revela nuevos aspectos de nuestra identidad."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <p class="text-center text-sm text-gray-500 mt-8" data-aos="fade-up">¿Eres investigador o especialista? <a href="https://api.whatsapp.com/send/?phone=5493525539014&text=Hola+estoy+en+la+pagina+web+y+quiero+hacer+una+consulta%21&type=phone_number&app_absent=0" target="_blank" class="underline text-[var(--primary-dark)]">Contáctanos</a></p>
+      </div>
+    </section>
+
+    <!-- ESPACIOS DEL MUSEO -->
+<section class="py-12 bg-[var(--light)]">
+  <div class="container mx-auto px-4">
+    <h3 class="text-2xl font-bold mb-8 text-center text-[var(--primary-dark)] font-serif" data-aos="fade-up">Espacios del Museo</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Muestra permanente -->
+      <div class="bg-white p-6 rounded-xl shadow-md text-center" data-aos="fade-up">
+        <i data-feather="book" class="w-12 h-12 text-[var(--primary)] mx-auto mb-4"></i>
+        <h4 class="text-xl font-bold mb-2 text-[var(--primary-dark)] font-serif">Muestra Permanente</h4>
+        <p class="text-gray-700">
+          Objetos, documentos y fotografías que narran la historia de Jesús María desde sus orígenes hasta la actualidad.
+        </p>
+      </div>
+
+      <!-- Archivo documental -->
+      <div class="bg-white p-6 rounded-xl shadow-md text-center" data-aos="fade-up" data-aos-delay="100">
+        <i data-feather="archive" class="w-12 h-12 text-[var(--primary)] mx-auto mb-4"></i>
+        <h4 class="text-xl font-bold mb-2 text-[var(--primary-dark)] font-serif">Archivo Documental</h4>
+        <p class="text-gray-700">
+          Espacio destinado a la preservación de documentos históricos locales, abierto a la consulta para investigadores y público interesado.
+        </p>
+      </div>
+
+      <!-- Auditorio -->
+      <div class="bg-white p-6 rounded-xl shadow-md text-center" data-aos="fade-up" data-aos-delay="200">
+        <i data-feather="music" class="w-12 h-12 text-[var(--primary)] mx-auto mb-4"></i>
+        <h4 class="text-xl font-bold mb-2 text-[var(--primary-dark)] font-serif">Auditorio</h4>
+        <p class="text-gray-700">
+          Espacio multifuncional donde se realizan muestras temporales, capacitaciones, presentaciones culturales y conciertos.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- INFORMACIÓN TÉCNICA -->
+<section class="py-12 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto bg-[var(--light)] p-8 rounded-xl shadow-md" data-aos="fade-up">
+      <h3 class="text-2xl font-bold mb-6 text-[var(--primary-dark)] font-serif">Información Técnica</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Edificio -->
+        <div>
+          <h4 class="font-bold mb-3 text-[var(--primary-dark)]">Edificio</h4>
+          <ul class="space-y-2 text-gray-700">
+            <li><strong>Origen:</strong> Antigua casona de la familia Biondi</li>
+            <li><strong>Época:</strong> Construcción de fines del siglo XIX</li>
+            <li><strong>Valor:</strong> Declarada patrimonio histórico de Jesús María</li>
+            <li><strong>Uso actual:</strong> Museo de la Ciudad y sede de la Dirección de Cultura</li>
+          </ul>
+        </div>
+
+        <!-- Colección -->
+        <div>
+          <h4 class="font-bold mb-3 text-[var(--primary-dark)]">Colección</h4>
+          <ul class="space-y-2 text-gray-700">
+            <li><strong>Muestra permanente:</strong> Objetos y documentos de la historia local</li>
+            <li><strong>Muestras temporales:</strong> Exposiciones con distintas temáticas</li>
+            <li><strong>Archivo documental:</strong> Fondos históricos de la ciudad</li>
+            <li><strong>Espacios:</strong> Auditorio para actividades culturales y educativas</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="bg-[var(--primary-dark)] text-white py-8 border-t-4 border-[var(--primary-light)]">
+  <!-- BOTÓN VOLVER ARRIBA - Se muestra cuando se hace scroll hacia abajo -->
+  <button id="scrollToTopBtn" aria-label="Volver arriba" class="fixed bottom-6 right-6 z-50 bg-[var(--primary)] text-white p-3 rounded-full shadow-lg hover:bg-[var(--primary-dark)] transition hidden">
+    <i data-feather="arrow-up"></i>
+  </button>
+  
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Info Museo -->
+      <div>
+        <h4 class="text-lg font-bold mb-4 font-serif">Museo de la Ciudad Luis Biondi</h4>
+        <div class="space-y-2">
+          <div class="flex items-center">
+            <i data-feather="map-pin" class="mr-2"></i>
+            <span>Ingeniero Olmos 453, Jesús María, Córdoba</span>
+          </div>
+          <div class="flex items-center">
+            <i data-feather="phone" class="mr-2"></i>
+            <span>(03525) 443760 · WhatsApp: +54 9 3525 539012</span>
+          </div>
+          <div class="flex items-center">
+            <i data-feather="mail" class="mr-2"></i>
+            <span>turismo@jesusmaria.gov.ar</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Redes sociales -->
+      <div class="flex flex-col items-center md:items-start">
+        <h4 class="text-lg font-bold mb-4 font-serif">Seguinos</h4>
+        <div class="flex space-x-4">
+          <a href="https://www.facebook.com/museodelaciudad.luisbiondi/?locale=es_LA" target="_blank" class="hover:text-[var(--primary-light)] transition">
+            <i data-feather="facebook" class="w-6 h-6"></i>
+          </a>
+          <a href="https://www.instagram.com/explore/locations/1008940069/museo-de-la-ciudad-luis-biondi/" target="_blank" class="hover:text-[var(--primary-light)] transition">
+            <i data-feather="instagram" class="w-6 h-6"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Créditos -->
+      <div class="text-center md:text-right">
+        <p>© 2025 Museo de la Ciudad Luis Biondi · Jesús María</p>
+        <p class="text-sm text-[var(--primary-light)] mt-2">Sitio web realizado por el Área de Cultura de Jesús María</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="mobile_menu.js"></script>
+<script src="script.MuseoCiudad.js"></script>
+</body>
+</html>

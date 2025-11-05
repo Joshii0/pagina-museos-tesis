@@ -1,0 +1,292 @@
+<!-- PÁGINA DE AGENDA CULTURAL - Muestra eventos y actividades del museo -->
+<!-- Incluye calendario interactivo, lista de eventos y formulario de propuestas -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- CONFIGURACIÓN DEL DOCUMENTO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda – Museo Torre Céspedes</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="https://jesusmaria.tur.ar/frontend/images/favicon/favicon.ico">
+
+  <!-- ARCHIVOS EXTERNOS -->
+  <!-- Tailwind CSS, AOS para animaciones, Feather para iconos -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="style.MuseoTorres.css">
+  <!-- Mejoras de responsividad -->
+  <link rel="stylesheet" href="responsive_improvements.css">
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-[var(--primary)] bg-opacity-95 backdrop-blur-md border-b-4 border-[var(--primary-light)]">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="logo-circle w-10 h-10 rounded-full"></div>
+        <h1 class="text-white text-xl font-bold font-serif">Museo Torre Céspedes</h1>
+      </div>
+      
+      <nav class="hidden md:flex items-center space-x-2">
+        <a href="portal-museos.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Turismo Jesús María</a>
+        <a href="index.MuseoTorres.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Inicio</a>
+        <a href="historia.MuseoTorres.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Historia</a>
+        <a href="agenda.MuseoTorres.html" class="nav-link px-4 py-2 text-white font-semibold bg-white bg-opacity-20 rounded-full">Agenda</a>
+        <a href="contacto.MuseoTorres.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Contacto</a>
+        <span class="text-white px-2">|</span>
+        <a href="" class="nav-link px-3 py-1 text-white text-sm font-medium hover:underline">EN</a>
+      </nav>
+      
+      <!-- Mobile menu button -->
+      <button class="md:hidden text-white">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- CONTENIDO PRINCIPAL DE LA AGENDA -->
+
+    <!-- SECCIÓN HERO - Encabezado de la agenda cultural -->
+    <section class="bg-[var(--primary)] text-white py-16">
+      <div class="container mx-auto px-4 text-center">
+  <h2 class="text-4xl font-bold mb-4 font-serif" data-aos="fade-up">Agenda Cultural</h2>
+        <p class="text-xl max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Descubrí las actividades y eventos que tenemos preparados para vos</p>
+      </div>
+    </section>
+
+
+    <!-- SECCIÓN DE EVENTOS - Lista de próximos eventos con filtros -->
+    <section class="py-12 bg-[var(--light)]">
+      <div class="container mx-auto px-4">
+        <h3 class="text-2xl font-bold mb-8 text-center text-[var(--primary-dark)] font-serif" data-aos="fade-up">Otros Eventos</h3>
+
+        <!-- LISTA DE EVENTOS - Tarjetas con información detallada -->
+        <div class="max-w-4xl mx-auto space-y-6" id="lista-eventos">
+          <!-- EVENTO 1: Encuentro de poesía -->
+          <div class="bg-white p-6 rounded-xl shadow-md event-card" data-aos="fade-up">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div>
+                <h4 class="text-xl font-bold text-[var(--primary-dark)] font-serif">Encuentro de poesía y memoria</h4>
+                <div class="flex items-center text-[var(--primary)] mt-1 mb-3">
+                  <i data-feather="calendar" class="w-4 h-4 mr-2"></i>
+                  <span>23 de mayo, a las 19:30 horas.</span>
+                </div>
+                <p>La destacada Tere Baudín recita obras en un evento cargado de memoria y arte. Un espacio para disfrutar de la poesía en un ambiente íntimo y acogedor.</p>
+              </div>
+              <a href="https://jesusmaria.tur.ar/novedades/eventos/encuentro-de-poesia-y-memoria-en-la-torre-cespedes-un-espacio-de-intercambio-cultural.html" class="md:self-start px-6 py-2 bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white font-semibold rounded-lg transition whitespace-nowrap">Más información</a>
+            </div>
+          </div>
+
+          <!-- EVENTO 2: Visita guiada -->
+          <div class="bg-white p-6 rounded-xl shadow-md event-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div>
+                <h4 class="text-xl font-bold text-[var(--primary-dark)] font-serif">Una noche para descubrir el cielo: Astroturismo en el Parque Ecológico Riberas Oeste</h4>
+                <div class="flex items-center text-[var(--primary)] mt-1 mb-3">
+                  <i data-feather="calendar" class="w-4 h-4 mr-2"></i>
+                  <span>31 de mayo, desde las 19:30 horas</span>
+                </div>
+                <p>Estará guiada por Jonatan Mira, especialista en turismo astronómico y Monitor Astronómico Starlight. Durante la jornada, los participantes podrán conectarse con el cielo nocturno, conocer sus secretos, y descubrir mitos y leyendas que lo rodean.</p>
+              </div>
+              <a href="https://jesusmaria.tur.ar/novedades/eventos/una-noche-para-descubrir-el-cielo-astroturismo-en-el-parque-ecologico-riberas-oeste.html" class="md:self-start px-6 py-2 bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white font-semibold rounded-lg transition whitespace-nowrap">Más información</a>
+            </div>
+          </div>
+
+          <!-- EVENTO 3: Taller de escritura -->
+          <div class="bg-white p-6 rounded-xl shadow-md event-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div>
+                <h4 class="text-xl font-bold text-[var(--primary-dark)] font-serif">Jesús María recibe a artistas de todo el país en el 3° Encuentro de Escultores</h4>
+                <div class="flex items-center text-[var(--primary)] mt-1 mb-3">
+                  <i data-feather="calendar" class="w-4 h-4 mr-2"></i>
+                  <span>11 de mayo, a las 9 horas, y se extenderán hasta el jueves 15 a las 11 horas</span>
+                </div>
+                <p>El encuentro se realizará en la Plaza Pío León, en horarios de mañana y tarde, y estará abierto al público. La propuesta busca acercar el arte a la comunidad y enriquecer el patrimonio cultural de la ciudad, generando un espacio de intercambio entre artistas, vecinos y turistas.</p>
+              </div>
+              <a href="https://jesusmaria.tur.ar/novedades/eventos/jesus-maria-recibe-a-artistas-de-todo-el-pais-en-el-3-encuentro-de-escultores.html" class="md:self-start px-6 py-2 bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white font-semibold rounded-lg transition whitespace-nowrap">Más información</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE EVENTOS PASADOS Y DESTACADOS -->
+    <!-- Muestra eventos anteriores para dar contexto de las actividades realizadas -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <h3 class="text-2xl font-bold mb-8 text-center text-[var(--primary-dark)] font-serif" data-aos="fade-up">Eventos Pasados y Destacados</h3>
+        <!-- GRID DE EVENTOS PASADOS - Dos columnas en desktop -->
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- EVENTO PASADO 1 -->
+          <div class="bg-[var(--light)] p-6 rounded-xl shadow-md" data-aos="fade-up">
+            <h4 class="text-xl font-bold text-[var(--primary-dark)] font-serif mb-2">Ciclo de charlas históricas</h4>
+            <div class="flex items-center text-[var(--primary)] mb-2">
+              <i data-feather="calendar" class="w-4 h-4 mr-2"></i>
+              <span>15 de abril 2025 · 18:00</span>
+            </div>
+            <p>Expertos locales compartieron investigaciones sobre la historia de la Torre Céspedes y su impacto en la comunidad.</p>
+          </div>
+          <!-- EVENTO PASADO 2 -->
+          <div class="bg-[var(--light)] p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+            <h4 class="text-xl font-bold text-[var(--primary-dark)] font-serif mb-2">Festival de música en la torre</h4>
+            <div class="flex items-center text-[var(--primary)] mb-2">
+              <i data-feather="calendar" class="w-4 h-4 mr-2"></i>
+              <span>28 de marzo 2025 · 20:00</span>
+            </div>
+            <p>Artistas regionales ofrecieron un espectáculo musical al aire libre, celebrando la cultura y el patrimonio local.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE INFORMACIÓN PARA VISITANTES -->
+    <!-- Información práctica sobre horarios y condiciones de visita -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <!-- CONTENEDOR DE INFORMACIÓN PRÁCTICA -->
+        <div class="max-w-4xl mx-auto bg-[var(--light)] p-8 rounded-xl shadow-md" data-aos="fade-up">
+          <h3 class="text-2xl font-bold mb-6 text-[var(--primary-dark)] font-serif">Información para visitantes</h3>
+
+          <!-- GRID DE DOS COLUMNAS - Horarios e información general -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- COLUMNA 1: HORARIOS -->
+            <div>
+              <h4 class="font-bold mb-3 flex items-center">
+                <i data-feather="clock" class="w-5 h-5 mr-2 text-[var(--primary)]"></i>
+                Horarios
+              </h4>
+              <div class="space-y-2 pl-7">
+                <div class="flex justify-between border-b pb-2">
+                  <span class="font-medium">Lunes a Viernes</span>
+                  <span>09:00–13:00 · 16:00–20:00</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                  <span class="font-medium">Sábados</span>
+                  <span>10:00–13:00</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-medium">Domingos</span>
+                  <span>Consultar agenda</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- COLUMNA 2: INFORMACIÓN GENERAL -->
+            <div>
+              <h4 class="font-bold mb-3 flex items-center">
+                <i data-feather="info" class="w-5 h-5 mr-2 text-[var(--primary)]"></i>
+                General
+              </h4>
+              <div class="space-y-3 pl-7">
+                <div class="flex justify-between border-b pb-2">
+                  <span class="font-medium">Entrada</span>
+                  <span>Libre y gratuita</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                  <span class="font-medium">Accesibilidad</span>
+                  <span>Movilidad reducida</span>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-600">Para visitas grupales o escolares, coordinar previamente por teléfono o email.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS PARA GRUPOS - MUSEO TORRE CÉSPEDES -->
+<section class="py-12 bg-[var(--primary)] text-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+      <h3 class="text-2xl font-bold mb-4 font-serif">Servicios para Grupos</h3>
+      <p class="mb-8 max-w-2xl mx-auto">
+        Descubrí el patrimonio de Jesús María y Colonia Caroya con recorridos guiados y talleres educativos diseñados para escuelas, grupos y visitantes especiales.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+          <i data-feather="users" class="w-8 h-8 mx-auto mb-4"></i>
+          <h4 class="font-bold mb-2">Recorridos guiados</h4>
+          <p>
+            Explora la historia de la Torre Céspedes y su entorno con guías especializados que explican la arquitectura, colecciones y patrimonio del museo.
+          </p>
+        </div>
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+          <i data-feather="book-open" class="w-8 h-8 mx-auto mb-4"></i>
+          <h4 class="font-bold mb-2">Talleres educativos</h4>
+          <p>
+            Participa en talleres culturales y educativos sobre historia local, arte y patrimonio, organizados regularmente por el museo.  
+          </p>
+        </div>
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+          <i data-feather="calendar" class="w-8 h-8 mx-auto mb-4"></i>
+          <h4 class="font-bold mb-2">Coordinación previa</h4>
+          <p>
+            Para grupos y escuelas, recomendamos coordinar la visita con anticipación para asegurar horarios y atención personalizada.
+          </p>
+        </div>
+      </div>
+      <a href="contacto.MuseoTorres.html#formulario-contacto" class="inline-block px-8 py-3 bg-white text-[var(--primary-dark)] font-bold rounded-lg hover:bg-gray-100 transition">
+        Coordinar visita
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer class="bg-[var(--primary-dark)] text-white py-8 border-t-4 border-[var(--primary-light)]">
+    <button id="scrollToTopBtn" aria-label="Volver arriba" class="fixed bottom-6 right-6 z-50 bg-[var(--primary)] text-white p-3 rounded-full shadow-lg hover:bg-[var(--primary-dark)] transition hidden">
+      <i data-feather="arrow-up"></i>
+    </button>
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h4 class="text-lg font-bold mb-4 font-serif">Museo Torre Céspedes</h4>
+          <div class="space-y-2">
+            <div class="flex items-center">
+              <i data-feather="map-pin" class="mr-2"></i>
+              <span>Cástulo Peña 387, Jesús María, Córdoba</span>
+            </div>
+            <div class="flex items-center">
+              <i data-feather="phone" class="mr-2"></i>
+              <span>(03525) 443773 · WhatsApp: 3525-539012</span>
+            </div>
+            <div class="flex items-center">
+              <i data-feather="mail" class="mr-2"></i>
+              <span>turismo@jesusmaria.gov.ar</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex flex-col items-center md:items-start">
+          <h4 class="text-lg font-bold mb-4 font-serif">Seguinos</h4>
+          <div class="flex space-x-4">
+            <a href="https://www.facebook.com/torrecespedes/mentions?locale=es_LA" target="_blank" class="hover:text-[var(--primary-light)] transition">
+              <i data-feather="facebook" class="w-6 h-6"></i>
+            </a>
+            <a href="https://www.instagram.com/turismojesusmaria?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:text-[var(--primary-light)] transition">
+              <i data-feather="instagram" class="w-6 h-6"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="text-center md:text-right">
+          <p>© 2025 Museo Torre Céspedes · Jesús María</p>
+          <p class="text-sm text-[var(--primary-light)] mt-2">Sitio web realizado por el área de Cultura</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script src="mobile_menu.js"></script>
+<script src="script.MuseoTorres.js"></script>
+</body>
+</html>

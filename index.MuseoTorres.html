@@ -1,0 +1,310 @@
+<!-- DOCUMENTO HTML PRINCIPAL - Página de inicio del Museo Torre Céspedes -->
+<!-- Este archivo contiene la estructura principal del sitio web del museo -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- CONFIGURACIÓN BÁSICA DEL DOCUMENTO -->
+  <!-- Define la codificación de caracteres y configuración responsive -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Museo Torre Céspedes – Jesús María</title>
+  <meta name="description" content="Museo Torre Céspedes de Jesús María, Córdoba. Historia local, patrimonio y agenda cultural.">
+  <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://jesusmaria.tur.ar/frontend/images/favicon/favicon.ico">
+
+  <!-- ETIQUETAS META PARA SEO Y REDES SOCIALES -->
+  <!-- Estas etiquetas ayudan con el posicionamiento en buscadores y apariencia en redes sociales -->
+  <meta property="og:title" content="Museo Torre Céspedes – Jesús María" />
+  <meta property="og:description" content="Museo Torre Céspedes de Jesús María, Córdoba. Historia local, patrimonio y agenda cultural." />
+  <meta property="og:image" content="media/log.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.torrecespedes.com.ar/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Museo Torre Céspedes – Jesús María" />
+  <meta name="twitter:description" content="Museo Torre Céspedes de Jesús María, Córdoba. Historia local, patrimonio y agenda cultural." />
+  <meta name="twitter:image" content="media/log.jpg" />
+  
+  <!-- ARCHIVOS EXTERNOS -->
+  <!-- Tailwind CSS para estilos rápidos, AOS para animaciones, Feather para iconos -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="style.MuseoTorres.css">
+  <!-- Mejoras de responsividad -->
+  <link rel="stylesheet" href="responsive_improvements.css">
+</head>
+<body class="flex flex-col min-h-screen">
+  <!-- CUERPO PRINCIPAL DEL DOCUMENTO -->
+  <!-- Estructura flexbox que asegura que el footer esté siempre abajo -->
+
+  <!-- ENCABEZADO - Header sticky con navegación -->
+  <!-- Se mantiene fijo en la parte superior durante el scroll -->
+  <header class="sticky top-0 z-50 bg-[var(--primary)] bg-opacity-95 backdrop-blur-md border-b-4 border-[var(--primary-light)]">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- LOGO Y TÍTULO DEL MUSEO -->
+      <div class="flex items-center space-x-3">
+        <div class="logo-circle w-10 h-10 rounded-full"></div>
+        <h1 class="text-white text-xl font-bold font-serif">Museo Torre Céspedes</h1>
+      </div>
+
+      <!-- NAVEGACIÓN PRINCIPAL - Visible solo en desktop -->
+      <nav class="hidden md:flex items-center space-x-2">
+        <a href="portal-museos.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Turismo Jesús María</a>
+        <a href="index.MuseoTorres.html" class="nav-link px-4 py-2 text-white font-semibold rounded-full bg-white bg-opacity-20">Inicio</a>
+        <a href="historia.MuseoTorres.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Historia</a>
+        <a href="agenda.MuseoTorres.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Agenda</a>
+        <a href="contacto.MuseoTorres.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Contacto</a>
+        <span class="text-white px-2">|</span>
+        <a href="" class="nav-link px-3 py-1 text-white text-sm font-medium hover:underline">EN</a>
+      </nav>
+
+      <!-- BOTÓN DE MENÚ MÓVIL - Solo visible en dispositivos pequeños -->
+      <button class="md:hidden text-white">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- CONTENIDO PRINCIPAL - Se expande para ocupar el espacio disponible -->
+
+    <!-- SECCIÓN HERO - Video de fondo con texto de bienvenida -->
+    <!-- Esta es la primera sección que ven los visitantes, con video de fondo y llamado a acción -->
+    <section class="hero-video relative h-96 flex items-center justify-center text-white overflow-hidden">
+      <!-- VIDEO BACKGROUND -->
+      <video class="hero-video-bg absolute inset-0 w-full h-full object-cover" autoplay muted loop>
+        <source src="Videos/jm_video-torre-cespedes.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- OVERLAY OSCURO - Para mejorar la legibilidad del texto sobre el video -->
+      <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+      <!-- CONTENIDO DEL HERO - Centrado y con animación de aparición -->
+      <div class="container mx-auto px-4 z-10 text-center" data-aos="fade-up">
+        <span class="inline-block px-3 py-1 mb-4 text-sm font-semibold bg-white text-[var(--primary-dark)] rounded-full">Jesús María · Córdoba</span>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 font-serif">Bienvenidos al Museo Torre Céspedes</h2>
+        <p class="text-xl max-w-2xl mx-auto mb-8">Un ícono arquitectónico del siglo XIX que guarda la memoria de la ciudad. Descubrí su historia y participá de sus actividades culturales.</p>
+        <!-- BOTONES DE ACCIÓN - Enlaces a secciones principales del sitio -->
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="historia.MuseoTorres.html" class="px-6 py-3 bg-[var(--primary-dark)] hover:bg-[var(--primary)] text-white font-semibold rounded-lg transition-all">Nuestra historia</a>
+          <a href="agenda.MuseoTorres.html" class="px-6 py-3 bg-white hover:bg-gray-100 text-[var(--primary-dark)] font-semibold rounded-lg transition-all">Agenda cultural</a>
+          <a href="contacto.MuseoTorres.html" class="px-6 py-3 border-2 border-white hover:bg-white hover:bg-opacity-20 text-white font-semibold rounded-lg transition-all">Visitanos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE TESTIMONIOS - Comentarios de visitantes -->
+    <!-- Muestra opiniones reales de personas que han visitado el museo -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <h3 class="text-2xl font-bold mb-8 text-center text-[var(--primary-dark)] font-serif" data-aos="fade-up">Testimonios de visitantes</h3>
+        <!-- GRID RESPONSIVO - 1 columna en móvil, 3 en desktop -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- TESTIMONIO 1 -->
+          <div class="bg-[var(--light)] p-6 rounded-xl shadow-md" data-aos="fade-up">
+            <p class="text-lg italic mb-4">“Un lugar mágico lleno de historia y cultura. La visita guiada fue excelente.”</p>
+            <div class="flex items-center gap-3">
+              <img src="Perfiles/screenshot_4.png" alt="Visitante 1" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <span class="font-bold">María G.</span><br>
+                <span class="text-sm text-gray-600">Jesús María</span>
+              </div>
+            </div>
+          </div>
+          <!-- TESTIMONIO 2 -->
+          <div class="bg-[var(--light)] p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+            <p class="text-lg italic mb-4">“La arquitectura de la torre es impresionante. Volveré con mi familia.”</p>
+            <div class="flex items-center gap-3">
+              <img src="Perfiles/Fotografia-de-Retrato-39-1024x1024.webp" alt="Visitante 2" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <span class="font-bold">Carlos P.</span><br>
+                <span class="text-sm text-gray-600">Córdoba</span>
+              </div>
+            </div>
+          </div>
+          <!-- TESTIMONIO 3 -->
+          <div class="bg-[var(--light)] p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+            <p class="text-lg italic mb-4">“Excelente atención y actividades culturales para todas las edades.”</p>
+            <div class="flex items-center gap-3">
+              <img src="Perfiles/trajes-para-ir-a-la-oficina-1580713818.avif" alt="Visitante 3" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <span class="font-bold">Raul I.</span><br>
+                <span class="text-sm text-gray-600">Villa del Totoral</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE CARRUSEL DE IMÁGENES -->
+    <!-- Carrusel automático con controles manuales para mostrar fotos del museo -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4" data-aos="fade-up">
+        <!-- CONTENEDOR DEL CARRUSEL -->
+        <div class="relative overflow-hidden rounded-xl shadow-lg">
+          <!-- IMÁGENES DEL CARRUSEL - Se deslizan horizontalmente -->
+          <div class="carousel flex transition-transform duration-500 ease-in-out" aria-live="polite">
+            <div class="carousel-item min-w-full">
+              <img src="media/gallery-wide_jesus-maria-turismo-atractivos-torre-cespedes-1-5883.jpg" alt="Vista de la Torre Céspedes desde el jardín" class="w-full h-auto" aria-label="Imagen de la torre desde el jardín">
+            </div>
+            <div class="carousel-item min-w-full">
+              <img src="media/20250730_163709.jpg" alt="Detalle arquitectónico de la Torre Céspedes" class="w-full h-full" aria-label="Detalle arquitectónico de la torre">
+            </div>
+            <div class="carousel-item min-w-full">
+              <img src="media/gallery-wide_jesus-maria-turismo-atractivos-torre-cespedes-3-5883.jpg" alt="Interior del museo Torre Céspedes" class="w-full h-auto" aria-label="Interior del museo">
+            </div>
+          </div>
+          <!-- BOTÓN ANTERIOR -->
+          <button class="carousel-btn prev absolute left-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition" aria-label="Imagen anterior">
+            <i data-feather="chevron-left" aria-hidden="true"></i>
+          </button>
+          <!-- BOTÓN SIGUIENTE -->
+          <button class="carousel-btn next absolute right-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition" aria-label="Imagen siguiente">
+            <i data-feather="chevron-right" aria-hidden="true"></i>
+          </button>
+          <!-- INDICADORES DE POSICIÓN -->
+          <div class="carousel-dots flex justify-center items-center gap-2 mt-4" aria-label="Selector de imagen">
+            <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300" aria-label="Imagen 1" data-index="0"></button>
+            <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300" aria-label="Imagen 2" data-index="1"></button>
+            <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300" aria-label="Imagen 3" data-index="2"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE TARJETAS INFORMATIVAS -->
+    <!-- Tres tarjetas que resumen los aspectos principales del museo -->
+    <section class="py-12 bg-[var(--light)]">
+      <div class="container mx-auto px-4">
+        <!-- GRID DE TARJETAS - Responsivo y con efectos hover -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up">
+          <!-- TARJETA 1: HISTORIA -->
+          <div class="bg-white p-6 rounded-xl shadow-md transition-all duration-300 card-hover">
+            <h3 class="text-xl font-bold mb-3 text-[var(--primary-dark)] font-serif">Historia viva</h3>
+            <p class="text-gray-700">Un edificio con más de un siglo de historia que hoy funciona como museo y espacio cultural para toda la comunidad.</p>
+          </div>
+          <!-- TARJETA 2: AGENDA CULTURAL -->
+          <div class="bg-white p-6 rounded-xl shadow-md transition-all duration-300 card-hover">
+            <h3 class="text-xl font-bold mb-3 text-[var(--primary-dark)] font-serif">Agenda</h3>
+            <p class="text-gray-700">Encuentros literarios, exposiciones, música y talleres que hacen de la torre un espacio vivo.</p>
+          </div>
+          <!-- TARJETA 3: PATRIMONIO -->
+          <div class="bg-white p-6 rounded-xl shadow-md transition-all duration-300 card-hover">
+            <h3 class="text-xl font-bold mb-3 text-[var(--primary-dark)] font-serif">Patrimonio</h3>
+            <p class="text-gray-700">Biblioteca, salón cultural y salas de memoria que resguardan el patrimonio local de Jesús María.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE GALERÍA DE IMÁGENES -->
+    <!-- Grid responsivo con fotos del museo -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <!-- GRID DE GALERÍA - Se adapta automáticamente al tamaño de pantalla -->
+        <div class="gallery-grid">
+          <!-- IMAGEN 1: Vista nocturna -->
+          <div class="gallery-item rounded-xl overflow-hidden shadow-md" data-aos="fade-up">
+            <img src="media/caption.jpg" alt="Vista nocturna de la Torre Céspedes" class="w-full h-full object-cover" aria-label="Vista nocturna de la torre">
+          </div>
+          <!-- IMAGEN 2: Fachada principal -->
+          <div class="gallery-item rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+            <img src="media/SV4O5FEDYJA7VFASLOPS4F4Z2I.jpg" alt="Fachada principal del museo" class="w-full h-full object-cover" aria-label="Fachada principal del museo">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE HORARIOS Y VISITAS -->
+    <!-- Información práctica para visitantes -->
+    <section class="py-12 bg-[var(--light)]">
+      <div class="container mx-auto px-4">
+        <!-- GRID DE DOS COLUMNAS - Horarios y visitas -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up">
+          <!-- COLUMNA 1: HORARIOS -->
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="text-xl font-bold mb-4 text-[var(--primary-dark)] font-serif">Horarios</h3>
+            <div class="space-y-3">
+              <div class="flex justify-between border-b pb-2">
+                <span class="font-medium">Lunes a Viernes</span>
+                <span>09:00–13:00 · 16:00–20:00</span>
+              </div>
+              <div class="flex justify-between border-b pb-2">
+                <span class="font-medium">Sábados</span>
+                <span>10:00–13:00</span>
+              </div>
+              <div class="flex justify-between border-b pb-2">
+                <span class="font-medium">Domingos</span>
+                <span>Consultar agenda</span>
+              </div>
+            </div>
+            <p class="text-sm text-gray-500 mt-4">Los horarios pueden variar por actividades especiales.</p>
+          </div>
+          <!-- COLUMNA 2: INFORMACIÓN DE VISITAS -->
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="text-xl font-bold mb-4 text-[var(--primary-dark)] font-serif">Visitas</h3>
+            <p class="mb-6">Entrada libre y gratuita. Para grupos y escuelas, coordinar previamente.</p>
+            <a href="contacto.MuseoTorres.html#formulario-contacto" class="inline-block px-6 py-2 bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white font-semibold rounded-lg transition">Coordinar visita</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA - Información de contacto y enlaces -->
+  <footer class="bg-[var(--primary-dark)] text-white py-8 border-t-4 border-[var(--primary-light)]">
+    <!-- BOTÓN VOLVER ARRIBA - Se muestra cuando se hace scroll hacia abajo -->
+    <button id="scrollToTopBtn" aria-label="Volver arriba" class="fixed bottom-6 right-6 z-50 bg-[var(--primary)] text-white p-3 rounded-full shadow-lg hover:bg-[var(--primary-dark)] transition hidden">
+      <i data-feather="arrow-up"></i>
+    </button>
+    <div class="container mx-auto px-4">
+      <!-- GRID DE TRES COLUMNAS - Información, redes sociales y copyright -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- COLUMNA 1: INFORMACIÓN DEL MUSEO -->
+        <div>
+          <h4 class="text-lg font-bold mb-4 font-serif">Museo Torre Céspedes</h4>
+          <div class="space-y-2">
+            <div class="flex items-center">
+              <i data-feather="map-pin" class="mr-2"></i>
+              <span>Cástulo Peña 387, Jesús María, Córdoba</span>
+            </div>
+            <div class="flex items-center">
+              <i data-feather="phone" class="mr-2"></i>
+              <span>(03525) 443773 · WhatsApp: 3525-539012</span>
+            </div>
+            <div class="flex items-center">
+              <i data-feather="mail" class="mr-2"></i>
+              <span>turismo@jesusmaria.gov.ar</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMNA 2: REDES SOCIALES -->
+        <div class="flex flex-col items-center md:items-start">
+          <h4 class="text-lg font-bold mb-4 font-serif">Seguinos</h4>
+          <div class="flex space-x-4">
+            <a href="https://www.facebook.com/torrecespedes/mentions?locale=es_LA" target="_blank" class="hover:text-[var(--primary-light)] transition">
+              <i data-feather="facebook" class="w-6 h-6"></i>
+            </a>
+            <a href="https://www.instagram.com/turismojesusmaria?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:text-[var(--primary-light)] transition">
+              <i data-feather="instagram" class="w-6 h-6"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- COLUMNA 3: COPYRIGHT -->
+        <div class="text-center md:text-right">
+          <p>© 2025 Museo Torre Céspedes · Jesús María</p>
+          <p class="text-sm text-[var(--primary-light)] mt-2">Sitio web realizado por el área de Cultura</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script src="mobile_menu.js"></script>
+<script src="script.MuseoTorres.js"></script>
+</body>
+</html>

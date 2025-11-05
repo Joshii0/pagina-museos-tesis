@@ -1,0 +1,76 @@
+Comandos Básicos de Python
+1. Verificar Instalación de Python
+
+# Ver versión de Python
+py --version
+
+# O también
+python --version
+2. Instalar Dependencias
+
+# Instalar Flask (framework web)
+py -m pip install flask
+
+# Instalar Flask-CORS (para manejo de CORS)
+py -m pip install flask-cors
+
+# Instalar todas las dependencias de un archivo requirements.txt (si existe)
+py -m pip install -r requirements.txt
+3. Ejecutar Scripts de Python
+
+# Ejecutar el script de creación de base de datos
+py create_db.py
+
+# Ejecutar el script para verificar la base de datos
+py check_db.py
+
+# Ejecutar el script de prueba de API
+py test_api.py
+
+# Ejecutar el servidor Flask
+py app.py
+
+# Ejecutar el servidor HTTP simple
+py server.py
+4. Comandos Útiles de pip
+
+# Ver paquetes instalados
+py -m pip list
+
+# Actualizar pip
+py -m pip install --upgrade pip
+
+# Desinstalar un paquete
+py -m pip uninstall flask
+
+# Verificar si un paquete está instalado
+py -m pip show flask
+5. Ejecutar en Modo Desarrollo
+
+# Ejecutar Flask con recarga automática (desarrollo)
+py -m flask run --reload
+
+# O con el script app.py
+FLASK_ENV=development py app.py
+6. Comandos para el Proyecto Específico
+
+# Crear la base de datos inicial
+py create_db.py
+
+# Verificar contenido de la base de datos
+py check_db.py
+
+# Probar la API
+py test_api.py
+
+# Iniciar servidor Flask (puerto 5000)
+py app.py
+
+# Iniciar servidor HTTP simple (puerto 8000)
+py server.py
+💡 Notas Importantes:
+py es el comando en Windows para Python
+python también funciona si está en el PATH
+Todos los comandos se ejecutan desde la carpeta raíz del proyecto
+El servidor Flask corre en http://localhost:5000
+El servidor HTTP simple corre en http://localhost:8000

@@ -1,0 +1,441 @@
+<!-- PÁGINA DE HISTORIA - Documento HTML que muestra la historia del Museo Torre Céspedes -->
+<!-- Esta página contiene información detallada sobre los orígenes y evolución del edificio -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- CONFIGURACIÓN DEL DOCUMENTO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia – Museo Torre Céspedes</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="https://jesusmaria.tur.ar/frontend/images/favicon/favicon.ico">
+
+  <!-- ARCHIVOS EXTERNOS -->
+  <!-- Tailwind CSS, AOS para animaciones, Feather para iconos -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="style.MuseoTorres.css">
+  <!-- Mejoras de responsividad -->
+  <link rel="stylesheet" href="responsive_improvements.css">
+</head>
+<body class="flex flex-col min-h-screen">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-[var(--primary)] bg-opacity-95 backdrop-blur-md border-b-4 border-[var(--primary-light)]">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="logo-circle w-10 h-10 rounded-full"></div>
+        <h1 class="text-white text-xl font-bold font-serif">Museo Torre Céspedes</h1>
+      </div>
+      
+      <nav class="hidden md:flex items-center space-x-2">
+        <a href="portal-museos.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Turismo Jesús María</a>
+        <a href="index.MuseoTorres.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Inicio</a>
+        <a href="historia.MuseoTorres.html" class="nav-link px-4 py-2 text-white font-semibold bg-white bg-opacity-20 rounded-full">Historia</a>
+        <a href="agenda.MuseoTorres.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Agenda</a>
+        <a href="contacto.MuseoTorres.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Contacto</a>
+        <span class="text-white px-2">|</span>
+        <a href="" class="nav-link px-3 py-1 text-white text-sm font-medium hover:underline">EN</a>
+      </nav>
+      
+      <!-- Mobile menu button -->
+      <button class="md:hidden text-white">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- CONTENIDO PRINCIPAL DE LA PÁGINA DE HISTORIA -->
+
+    <!-- SECCIÓN HERO - Encabezado de la página de historia -->
+    <section class="bg-[var(--primary)] text-white py-16">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-4 font-serif" data-aos="fade-up">Nuestra Historia</h2>
+        <p class="text-xl max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Descubrí la rica historia de este ícono arquitectónico de Jesús María</p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE ORÍGENES - Información sobre la construcción -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <!-- CONTENEDOR PRINCIPAL CON INFORMACIÓN HISTÓRICA -->
+        <div class="max-w-4xl mx-auto bg-[var(--light)] p-8 rounded-xl shadow-md" data-aos="fade-up">
+          <h3 class="text-2xl font-bold mb-6 text-[var(--primary-dark)] font-serif">Orígenes</h3>
+          <p class="mb-6">La Torre Céspedes fue levantada entre <strong>1896 y 1898</strong> por <strong>Gabriel Céspedes</strong>, inspirada en estilos medievales y moriscos. Su diseño evocaba fortalezas europeas y se convirtió en símbolo urbano de Jesús María.</p>
+          <!-- GALERÍA DE IMÁGENES HISTÓRICAS -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <img src="media/gallery-wide_jesus-maria-turismo-atractivos-torre-cespedes-1-5883.jpg" alt="Torre Céspedes" class="w-full rounded-lg shadow-md">
+            </div>
+            <div>
+              <img src="media/gallery-wide_jesus-maria-turismo-atractivos-torre-cespedes-2-5883.jpg" alt="Torre Céspedes" class="w-full rounded-lg shadow-md">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE LÍNEA DE TIEMPO - Historia cronológica del edificio -->
+    <section class="py-12 bg-[var(--light)]">
+      <div class="container mx-auto px-4">
+        <h3 class="text-2xl font-bold mb-8 text-center text-[var(--primary-dark)] font-serif" data-aos="fade-up">Línea de Tiempo</h3>
+
+        <!-- CONTENEDOR DE LA LÍNEA DE TIEMPO -->
+        <div class="relative max-w-4xl mx-auto">
+          <!-- LÍNEA VERTICAL CENTRAL - Conecta todos los eventos -->
+          <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-[var(--primary-light)] transform -translate-x-1/2"></div>
+
+          <div class="space-y-12">
+            <!-- EVENTO 1: Construcción -->
+            <div class="relative timeline-item" data-aos="fade-up">
+              <div class="bg-white p-6 rounded-xl shadow-md md:w-5/12 ml-auto">
+                <div class="flex items-center mb-2">
+                  <span class="w-8 h-8 rounded-full bg-[var(--primary-light)] flex items-center justify-center mr-3" aria-label="Construcción">
+                    <i data-feather="tool" class="w-5 h-5" aria-hidden="true"></i>
+                  </span>
+                  <div class="w-4 h-4 rounded-full bg-[var(--primary)] absolute left-1/2 transform -translate-x-1/2"></div>
+                  <h4 class="text-xl font-bold text-[var(--primary-dark)] font-serif">1896-1898</h4>
+                </div>
+                <p>Construcción de la Torre Céspedes por Gabriel Céspedes, inspirada en estilos medievales y moriscos.</p>
+              </div>
+            </div>
+
+            <!-- EVENTO 2: Siglo XX -->
+            <div class="relative timeline-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="bg-white p-6 rounded-xl shadow-md md:w-5/12">
+                <div class="flex items-center mb-2">
+                  <span class="w-8 h-8 rounded-full bg-[var(--primary-light)] flex items-center justify-center mr-3" aria-label="Reunión social">
+                    <i data-feather="users" class="w-5 h-5" aria-hidden="true"></i>
+                  </span>
+                  <div class="w-4 h-4 rounded-full bg-[var(--primary)] absolute left-1/2 transform -translate-x-1/2"></div>
+                  <h4 class="text-xl font-bold text-[var(--primary-dark)] font-serif">Siglo XX</h4>
+                </div>
+                <p>La torre se convierte en un importante punto de reunión social y cultural para la comunidad de Jesús María.</p>
+              </div>
+            </div>
+
+            <!-- EVENTO 3: Declaración como patrimonio -->
+            <div class="relative timeline-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="bg-white p-6 rounded-xl shadow-md md:w-5/12 ml-auto">
+                <div class="flex items-center mb-2">
+                  <span class="w-8 h-8 rounded-full bg-[var(--primary-light)] flex items-center justify-center mr-3" aria-label="Patrimonio cultural">
+                    <i data-feather="award" class="w-5 h-5" aria-hidden="true"></i>
+                  </span>
+                  <div class="w-4 h-4 rounded-full bg-[var(--primary)] absolute left-1/2 transform -translate-x-1/2"></div>
+                  <h4 class="text-xl font-bold text-[var(--primary-dark)] font-serif">Finales siglo XX</h4>
+                </div>
+                <p>El edificio es declarado patrimonio cultural y comienza su transformación en museo y espacio cultural.</p>
+              </div>
+            </div>
+
+            <!-- EVENTO 4: Actualidad -->
+            <div class="relative" data-aos="fade-up" data-aos-delay="300">
+              <div class="bg-white p-6 rounded-xl shadow-md md:w-5/12">
+                <div class="flex items-center mb-2">
+                  <span class="w-8 h-8 rounded-full bg-[var(--primary-light)] flex items-center justify-center mr-3" aria-label="Museo actual">
+                    <i data-feather="activity" class="w-5 h-5" aria-hidden="true"></i>
+                  </span>
+                  <div class="w-4 h-4 rounded-full bg-[var(--primary)] absolute left-1/2 transform -translate-x-1/2"></div>
+                  <h4 class="text-xl font-bold text-[var(--primary-dark)] font-serif">Actualidad</h4>
+                </div>
+                <p>La Torre Céspedes funciona como museo y centro cultural activo, preservando la memoria local y promoviendo actividades artísticas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería Histórica -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <h3 class="text-2xl font-bold mb-8 text-center text-[var(--primary-dark)] font-serif" data-aos="fade-up">Galería Histórica</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" role="list">
+          <figure class="bg-[var(--light)] rounded-xl shadow-md overflow-hidden" role="listitem">
+            <img src="media/100_0084.JPG" alt="Foto histórica de la Torre Céspedes 1" class="w-full h-64 object-cover" data-aos=fade-up loading="lazy">
+            <figcaption class="p-4 text-center text-[var(--primary-dark)] text-sm">Torre Céspedes, vista antigua</figcaption>
+          </figure>
+          <figure class="bg-[var(--light)] rounded-xl shadow-md overflow-hidden" role="listitem">
+            <img src="media/gallery-wide_jesus-maria-turismo-atractivos-torre-cespedes-1-5883.jpg" alt="Foto histórica de la Torre Céspedes 2" class="w-full h-64 object-cover" data-aos=fade-up loading="lazy">
+            <figcaption class="p-4 text-center text-[var(--primary-dark)] text-sm">Fachada principal, siglo XX</figcaption>
+          </figure>
+          <figure class="bg-[var(--light)] rounded-xl shadow-md overflow-hidden" role="listitem">
+            <img src="media/gallery-wide_jesus-maria-turismo-atractivos-torre-cespedes-2-5883.jpg" alt="Foto histórica de la Torre Céspedes 3" class="w-full h-64 object-cover" data-aos=fade-up loading="lazy">
+            <figcaption class="p-4 text-center text-[var(--primary-dark)] text-sm">Detalle arquitectónico</figcaption>
+          </figure>
+          <figure class="bg-[var(--light)] rounded-xl shadow-md overflow-hidden" role="listitem">
+            <img src="media/gallery-wide_jesus-maria-turismo-atractivos-torre-cespedes-3-5883.jpg" alt="Foto histórica de la Torre Céspedes 4" class="w-full h-64 object-cover" data-aos=fade-up loading="lazy">
+            <figcaption class="p-4 text-center text-[var(--primary-dark)] text-sm">Torre en contexto urbano</figcaption>
+          </figure>
+          <figure class="bg-[var(--light)] rounded-xl shadow-md overflow-hidden" role="listitem">
+            <img src="media/20250730_163359.jpg" alt="Foto histórica de la Torre Céspedes 5" class="w-full h-64 object-cover" data-aos=fade-up loading="lazy">
+            <figcaption class="p-4 text-center text-[var(--primary-dark)] text-sm">Archivo fotográfico local</figcaption>
+          </figure>
+          <figure class="bg-[var(--light)] rounded-xl shadow-md overflow-hidden" role="listitem">
+            <img src="media/b1.jpg" alt="Foto histórica de la Torre Céspedes 6" class="w-full h-64 object-cover" data-aos=fade-up loading="lazy">
+            <figcaption class="p-4 text-center text-[var(--primary-dark)] text-sm">Recuerdos de la comunidad</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recursos Externos -->
+    <section class="py-12 bg-[var(--light)]">
+      <div class="container mx-auto px-4">
+        <h3 class="text-2xl font-bold mb-8 text-center text-[var(--primary-dark)] font-serif" data-aos="fade-up">Recursos Externos Oficiales</h3>
+        <ul class="max-w-2xl mx-auto space-y-4" aria-label="Enlaces a recursos externos oficiales">
+          <li>
+            <a href="https://jesusmaria.tur.ar/" target="_blank" rel="noopener" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg shadow hover:bg-[var(--primary-light)] hover:text-white transition" data-aos=fade-up aria-label="Sitio oficial de turismo Jesús María">
+              <i data-feather="external-link" class="w-5 h-5"></i>
+              Sitio oficial de turismo Jesús María
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/torrecespedes/mentions?locale=es_LA" target="_blank" rel="noopener" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg shadow hover:bg-[var(--primary-light)] hover:text-white transition" data-aos=fade-up aria-label="Facebook Torre Céspedes">
+              <i data-feather="facebook" class="w-5 h-5"></i>
+              Facebook Torre Céspedes
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/turismojesusmaria?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg shadow hover:bg-[var(--primary-light)] hover:text-white transition" data-aos=fade-up aria-label="Instagram Turismo Jesús María">
+              <i data-feather="instagram" class="w-5 h-5"></i>
+              Instagram Turismo Jesús María
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Testimonios de Expertos -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <h3 class="text-2xl font-bold mb-8 text-center text-[var(--primary-dark)] font-serif" data-aos="fade-up">Testimonios de Expertos</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <blockquote class="bg-[var(--light)] p-6 rounded-xl shadow-md" data-aos="fade-up">
+            <p class="text-lg italic mb-4">“La Torre Céspedes representa un hito arquitectónico y cultural fundamental para la región, integrando estilos únicos y una historia viva.”</p>
+            <div class="flex items-center gap-3">
+              <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUQEhIVFhUVFRUXFhcYFRUVFRUaFRcWFhkWGBcYHSggGBslIhUYIjEhJSkrLi8uFx8zODMtNygtLisBCgoKDg0OGxAQFyslHyIvLS0tLSstOC0rLSstOC0zLi0tKzUtLSstOC01LS0tLS0tLS0rLS0tLS43LTcrLTc3N//AABEIAOAA4AMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAABAAIEBQYDB//EAD0QAAEDAgQDBgMHBAEDBQAAAAEAAhEDBAUSITEGQVETImFxgZGh0fAUIzJCscHhB1JicoJDsvEkM1OSov/EABkBAQADAQEAAAAAAAAAAAAAAAABAwQCBf/EACIRAQEAAgICAgMBAQAAAAAAAAABAhEDIRIxBEEiQlEjE//aAAwDAQACEQMRAD8AwICdlTgE4NUpMyohq6BqIagYGpwanZU8NQMDU4NTw1OhAwNRhPAQcOSIVWI4mKZyxr9aKjr3P59J2HOAFK4hpEVSRGrRv+3sqmOvJc11DvtB0EmOQnQeimW2IVGagT4aqGKnQBO7T6+vJEL+lxGPzU3DyIK62vENNzoc0sH9xiPWNlnRV/xXN72mAfdSPQAJ1CWVZrh6+LX9m+rDMvdB2meR5LUhShzypQukJQg5lqWVdcqEIOWVHKukJQg55Usq6QlCDnlQyrrCUIK4NRATgE4BEgGogJ8IhqBganBqcAnAIg0BOATgEQEDQFXYnijKQiZf/aNffopd9eNpCXbnQDmfksLWrFznP5k/+E2JOI3j6hGaPADlPU7zooR8UT8v4TfJcpKUgfNJi7CgSJjRByJQcV0NIjRN7M9ENGh8K3suIazAGw14HWc0dJB/ZU5CSDf4TiTa7ZGjh+Jp3E8/EeKnwvOrC9fReKjDrsRyI5tPgt9YXrKzc7D5jm09CF1Kh3yoQukIEKQyEYToRhAyEoT4ShBzhKE+EYQVwCcAnAIgKAAEYTgE4BAyE4BGEQEChFGFwxF0Uqh6McfYEqRkcavu1quymQ3us8juR5lVJ6BJx1KVJslcJHKV0ZS1+tzHzVjb2W3ifkrrD8HBO3TpI1XFzkWTjtUFvhr5HdnXbr9arTYXhIcyPgRq3Xb91qbTCGkARsI/hWtthrWxA+Coy5mjDgYm44cGpIjWB7/KVyqcNggQIOxHWTuOp1/Vehsw8ZpjnKk1sPBEQNwdvqFz/wBVl4I8lvuFnA6bzB38/noszVoEEg8jB+PyXuV7hZykgDM7blA1iSekrE4twzka6G6ugTyky4k9NY318FdhybZ8+LTz4hXnCNUivknRzTPjGo/f3XG6wd7QXRoJ5efx291X0arqbhUbo5pkeY5K6VRZp6XCUIUagc0OGxAPhqnwu3JsIwiAiAgbCEJ8IQgaAlCcjCCAAjCcAjCBoCeAgE4IBCUJ0IgIAFWcSVslu/q6Gj13+Eq1AWY41q/+2zl3nfoB+/uooyzQp2H0JP6Fc7SlO4V/h1qByCqyy0swx3UyhQhX2E0dQFFt6IIlW+H0Y/ZZcq2YzTQ2lLorCnSUGzKsqOyoXnMpwVKFCVyp9VNpv0XUm0VwNBQLuyaYJaNNp/hXenNQ7rZLNIl37YnG8KLwdBMGOQHnyHsOS8kxOgWPc0jZ0dZ0mZ58l7zdt7ruWn1PgvGOLaeWodDJOpM/U/wea08GW2b5GGu17wvXDqDf8QGn00/YH1VvCznBI+7ef8/0a35rSLXGMAlCKICkBKEQEkDYShOISQQgEYSCcAgaAnAJQiECSRSCBlasGCXLJcW3DXupOaQRldr/AMog+ULQYw4gM6ZtfXRZLHrfLUB5H2nn9eCr8vy0s8Pw8k7CmAsmFbW7VXYUIpD1U2nVIiBJ84+PJUZd1fh6X9oBorqypLK2FG6eSW9mBOgJI29NVLOKXlD8dEOH9wIj3H7qu4Wrcc9NzbsU+hT5eX15rGYRxe1zgyowNMxIdIHnP8raUKgMEbfsqbjcb2umcy9O/wBfXupNEaeq4zJ+ufNdqRA8Pr+VMiKc4FRa5U4uEbqNWYmWNRKrardPdeb8eYWMjqgkRyOgOomPWOuy9Mr6LEf1CeG2tR0bwB4F2k+xPup4b+SOabxrNcGMigT/AHPcfYNH7K+UDAbTsqDGHeMx83akfFWAXpPMJJFJSEkikgCSKCCIE4IJwQCEkUUDUUkQgiYkwFgnYOB9pKzmLgVQYEwZn4R8VpsRH3ZnbRZ60oOa6ozlAM+cws/JdZNHHN4FZtim0eC7yWiU2iNGjyVhVtszdBrsqre1snSHS4gLXZGST4Akn05DxKn4dxTQqHJUqPpnk5zGlvrlP18VCw+1cHkEa6ggiN+Sn4Pw3FYVHvqCn3A9jIb2jWPa8Mc6dWyxpIy/lB3C7nh9o/0+ku6t9RIY4luZj26sqDwO4O3M7jUq+4dxjOAOY0hRsZa3M6oxjWMdJLA/RjzPfYMoidAWjQy4yDM03Cpd28eJlU5yWLsbZY9Rae7Ko8frueMjKmTrAk/wryvLaYA6CP0WMxmjWLwxhEEgEzAkzofDRcYzt3fSrZakO1uQDO5JB9NfPmtBh+DvIn7W6d2wD8XZ5JXnjOJ7prngVadMMAIa4filzRlAgyYJJEiIOui0tS5r21y2lVptY53eDqU9jWaTGjD+B/PqdQZkRfcctbUY54W6bJjqollaHEARUboHjxH5XDnyWC/qndjJToj8zi4+Q0HxK3TKxc3Xp+q804tDq2INYJin2Y2kD85/VVcXee3fNuYa/rSVbR7Gse5sB4kddgdei4qbi1QlwBOsSfDN+Fvo0N+KhLdx23HdYeTGY5WQUUAiu3BJJJIEgnIFBFCKQSQEJJBFAEQkig5XDJY4eCqWU4jXTKQf2/dXapG21ftapc0dn/04I/TfbeVTyYb7XcWeuqjtCvLAzA8vdUqt8GPXqs2XpqwaI2VN4Et16zB913o4fA0Hu4rtZtU2rUa1pLiABuTyWe2tPjPahxpvdI/QaD5lQOEKP/qPQlLE8RmXMaS3qecq04Msj2mcj8X6KzvxV/s2VZugHkqDGcKc/Uax9b8lobg94+nyToBC43qutdPP6eCUc2Z1NragcHZjSaTI1Bkj113Vjb4aHVO1qvdUMR3jp7bBak23VoK51KLRyXV5MtaRMJtW1QGjoB+ypbTAOzNS+qiTBeGnSHO0a0jqJA9StA63zva3luQeYHL129SoXF13DWW4P+bv0E/H2XXBjbdOObKYzf8AGYe4uJcTJMknzQRQXovMFFAJKQUUEUBhNTkEEUIoJyBIhBFAkUEUCQcnIEoKEsU/CT3lHe3U+ateHqILieiwZ9PQ4+9NJaVIAlUPFVV9QBoMNGsdfNW2KVRR/FoNh46CT7k+ypRiFNx1cI6KrGfa/K/SkN+4AMLZbpJB1Gu4Eaj1nzXpfCdw1zGvEaR7rIHDLeqdKoaStFgODmiIbWLgTOgEe8LvKxGONntp8RuWAyZjQaAnU9YGirX3Jp1BE5XfAqwFEc+XVQ8Wtc7dNxqPRU5Xd2sx16WLK8hR67gq2zudIO661aui5u6nUjvbOaA57nADX/6tGp+KxmI3Rq1HVDzOngBoB7QoeI0e2rtrucZY3K1vdygS52kiQTm1IOu2yevS4eLwjy+bl87qEikkr1BIoIhAkUkkCRQSQRQigEUBCKCQQOCQSSCByBRTKz8rS7oFArbkQ8j61VjgNfLUg7O0VPRql/ePOf1/hd2PLSCORWPkm7W3iupG6xmiyvTLXgOBA05z5rz23sKdKrBbmpkkkE95vdIEHmJ9ltbG5zNHl+qqsRwqXEhVYXXTTZL7TcK4ZoVxT7KuWk05e2ZLXTHeadWzrp4K7w3ha4bTcG12gBzo0OusT4TA6781mbWi5hHaUy5o0kDWDvqr3DXtDSBcVWQQQxrXnYktyyYGw0XW9p8MpPxyOxW3urNj6vbNe1nLUF0CdBtPKE/A+IvtAyvpPpvImHDQjnBBjnt4pNw19U95zsskku3l25AO0+QV3TtGtaA0Du7fNV53HXp1qz3ltHbbiSVCxqpkpOjd3dHr/Eq2dtA2VDxRQqZGVMv3cxM/mI0kchAMFRwYXLOKufk8cKziSSC9V5ZIoIhAkUEkDkkEkBQRQQRgkkEUCRCCIQFEIIhAQo2NaBtIGJkn2klWljb5jmOw+KzfFlchzxzLS0f8i0LnKusYZaAZRl2gR4ypWSR4rhasgAdAAPQKTTMFZK1zpNwy5LYaeW3zWqZlc1p8lkWsDvAq5wm8yjI/68lVnj9xfx5fVaGnQaRAkKbQth1+CiWrwRIIVm14iJVcW0WsTKz+SbVuAFypS46e6iYubkcRoegU6xsRWZc2rjIe1j2OP9r2zTePItI/4KNcthhA6H9E7+nd459la1Ht7+Q0nxrAZ3myfL9Vs+L9sXyt3Tz+4ouY51N4hzSQ4dCFyK9D4/wDOPtVMd5o+8A/M0fm82/p5Lz1a2Q1EJJBAkUEUSSSSKBJJJIIoSSCSAhJJEICpFpbl58Bv8kWWTt3CJ2HM/JXVhbBrQAN9UCoUY0WX4+wotYK3VzW/wD6B/Zbe1pS4DxVhxZgBr2NRjGy4Br2jaSxwdEnqAR6qMp0nG9vLMPbLQpgtSha27qTuyqNLXDdp0I+uqvLShKxWtsinbbkKRQpPnRXL7OF2tKC58ncxc7GhV02+KuaVF/M+y6W9PRTqbAq9u99ItKzB8VPpUgBoE6m3wXSE1tHpHuBou3CtEUKFOmf+o9rmaf/ACMe/wBNGH2VTxPd9nRdAeS4EAMaXPiCXFrRuQ0OPorvhfGqV5SZWp03Mb2dIhr4zN71Vo20OgkHoQtPxse7Wb5GXUjSubPsvIOLMGNrXLQPu3y6n0jm3/jt5QvYeireIsHZdUjSdod2O5sdyPlyPgtbG8WhKFMxDDa1AltWm5usTHdPiHbFRESCSSSBIhJJEigkiUENOAnQKTZYZUqEAN3+tlq7DB20IDRnrHrszxKCks8AcYNU5Z2YO9UPps31Wkw7h5s6NDWjc7ucembp5K6wvCg3U6uO5O6sbshjICnTnbF4rQGaGjYFc7f8DfIKyuaXdc89Cqmke43yQTrJvfHmFvLRmZkdRHusHaO1B8Qt7hx7oQZi5wJmIW1J72GjWNNj2Ejv0y9ocabxzaCYI66jVZOlZ1KFQ0awh7fUOB2c08wY3/QyF6ZfuqNp1DRa11UNf2bXGGueAS1rjyBMCVmMFNbFLQuu7Z1rdUajmtJa9jSQGmWh2vZumCJIlsgmAquXj8u4u4uXx6vpVvZIQt2KRb03Cab2kOaYcOhC6uoQsNb/AKdKLfBTqLVEpNUukVyV2XOtXDQJkyQABq5xOwA5lcMTvmUabqtR0NaNfkPFUfDHEZdiDqNW2qdr2Zc0nRtAPaCxmWNS+QC+RqcokAlWceFzuleecwm2zwWw+9NR0F9MZTGoYXAOyg9QMsnq7wTcKY7t7p7vz12Bv+rGZR/2rtjVxWtLN9S2oG4qtLXdmCQahc8dodATPec7QLnhFd7uzNWn2VSo3tX0sweacwMpcAAdS8T/AIrdjjMZqMGWVyu6vzyRQKK6Qj3NFpEOaCD1WXxfgq3qyac0neAlnq3l6LXPC5EKUPIMX4aubeXOZmYPzs7zfXm31Cpwvc3jpos1jXCdCv3mjsqn9zAMrv8AZm3qIPmmk7eZIqzxnAK9qZqNlnKo3Vh9fynwKq1CRSQSCD0Wzw/IIbp1PNWdpaNZsNTuV2FJdWNXTkZgKLcd5d3hc4RCkxsZaR9vdU7GTTbpyVtxO+GR1KgMZ923/UfNQGWphb/CTLAV59Q3hegYIPum+SfSVK7FrpuKfZDaOdavphzbhodDHZSSHu/DEjKG76g6zppXtI1Cj3Za14c5+WRAB2JGv7qo4rvGfZy0X7LNxc3JXLqYAcDmy5XkB4IBkT+iCurY1bXV3WtGZ23VsBna5uUVWQ05mGTmy5xvBg7ELrVoaKZg+Dn7q6rPo1rprCw3LKYYKtNzswHdmNIMjTeN9ZF/Rhxy6jfTWOoMLLzcf7Rq4OT9aoy2E8VANSYA11XG6rBsz8lQtD7x0AH7O12Unbtn79mDzaN3H06xmxxuV1GvKyTdSMHLcRvhmP3NACoynBOczDaj+QE6tB1dlJGgk7rFbgsZUqhjqgt6b3hjdXVHtaTlb4xoPFxUWnTt8Ot6lYhtMa1Kj4OpjVzokujQBo8GjcBSOGMZo3du24oFxpkubLmlrpaSHSD4rfhhMZp53Jyed2hcN8Rvr2P227o/ZgC8kd4yxp7r2hwDjm2AjU7bhUH9M+IjiNe6uywsAfTpsaSDlYwPLR4HvSfElT+OLgvil+UHMR1I2J6wu/8AT6iA2oQB+PXzyjddq2wKISSRJrlzIXQppRDk5i5uauzlzKkcHt3EAgiCCJBHQjmspjPBdOp3rYik/nTOrD/qdx5fBbCE11OUHjGIWNSg806rS1w9iOoPMKMvWeIsIbdU8j4D260382noerTzXlNak5jixwhzSQR0I0KWJ29hATyFzoPkLpVOilDmSuBK6ToVxOyIZniWr3g1dYim3l3GeZ7oUXFWl9YABWj7Zop99wHITvppsNfREqy2bmcI5kBbvDr2lowVGTsBmHssVUqgDKzQHc/md8h4D1laXh3CcoFR4h35R/bPP/Y/AeJUISOLMOqXNrVp0HinWiaLyGmHtIIBzAgTGWYkSqqq66trek6v2dd8MbVjuHMWkuLCRDhLdJA39FrPBY3+qN06lZy2e9WpiRykOC5ytk6d4yXKbQOFOMa1Su+1ubUNLQXU6lHVmQGAKgk5HbazBMjTSbnC6zB2jKVI06TXvILoGYucXvcGyXRme/UxOkSFiOG8ZoW9N9Ek9p2Ju7moAS2mwwWMJ3Lsjg4NA5nqthwRibLy2+1U6b2NzPa0VAJcWHKHQ0/hnlO7T0lMd67MpN9OGEcSUroso1aFSma/aUgytTIBgFxyuIyvlrCQWz8FywPgZtjUqXdLPXrZCylTdUDWZSQYaSPuxIE/i2MSTC1OFWTu6a7+2qNcXB5aGhriCPu2CezADi0akxuSZKVvfk3Jtsu1Ltc3IZq1RgafMNkeTlOkbutG1KLLlj2V2MqUyA17SM1M8yBO+o85HguuH2gbSFNjBQY1paxjA0dmDOvd7ubWdJE9d1h+ILO/t7tmIPc+tbWlWs7sKYAe+lVpuIqhjNHlpqOpkuggUgdcxK2lrjNOta07qnIZVph7cwhwDhsQDE8tCR4lEPMrDD7q3a+jdXH2hwqOyPzPeckDdz9ZJkxrE7lbv+ntiKdGo4Ge1rPqH1DWR6ZAFgcLx2niFaoygHZm1A3vCJBLocIJ07rt9dF65hdqKVNrGjQD38UEwIpqbUfyUJc6z/4Cc4riaZLpG3VdQ2BClBLk5dgudQKQxEoIOKAOasNxxw84k3VITp943nA/OOum/kt4GlMqMQf/2Q==" alt="Foto de experto 1" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <span class="font-bold text-[var(--primary-dark)]">Dra. María González</span><br>
+                <span class="text-sm text-gray-600">Historiadora, UNC</span>
+              </div>
+            </div>
+          </blockquote>
+          <blockquote class="bg-[var(--light)] p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+            <p class="text-lg italic mb-12">“El valor patrimonial de la torre trasciende generaciones, siendo testigo de la evolución social y cultural de Jesús María.”</p>
+            <div class="flex items-center gap-3">
+              <img src="data:image/jpeg;base64,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" alt="Foto de experto 2" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <span class="font-bold text-[var(--primary-dark)]">Lic. Juan Pérez</span><br>
+                <span class="text-sm text-gray-600 ">Arquitecto, especialista en patrimonio</span>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+        <p class="text-center text-sm text-gray-500 mt-8 "data-aos=fade-up>¿Eres investigador o especialista? <a href="https://api.whatsapp.com/send/?phone=5493525539014&text=Hola+estoy+en+la+pagina+web+y+quiero+hacer+una+consulta%21&type=phone_number&app_absent=0" target="_blank" class="underline text-[var(--primary-dark)]">Contáctanos</a></p>
+      </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <h3 class="text-2xl font-bold mb-8 text-center text-[var(--primary-dark)] font-serif" data-aos="fade-up">Nuestros Espacios</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-[var(--light)] p-6 rounded-xl shadow-md transition-all duration-300 card-hover" data-aos="fade-up">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-[var(--primary-light)] flex items-center justify-center text-[var(--primary-dark)] mr-4">
+                <i data-feather="book" class="w-6 h-6"></i>
+              </div>
+              <h4 class="text-xl font-bold text-[var(--primary-dark)] font-serif">Biblioteca</h4>
+            </div>
+            <p class="mb-4">Espacio de consulta con material bibliográfico sobre historia regional y patrimonio. Abierta a estudiantes, investigadores y público en general.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-[var(--primary-light)] bg-opacity-30 text-[var(--primary-dark)] rounded-full text-sm">Consulta</span>
+              <span class="px-3 py-1 bg-[var(--primary-light)] bg-opacity-30 text-[var(--primary-dark)] rounded-full text-sm">Historia local</span>
+              <span class="px-3 py-1 bg-[var(--primary-light)] bg-opacity-30 text-[var(--primary-dark)] rounded-full text-sm">Silencio</span>
+            </div>
+          </div>
+          
+          <div class="bg-[var(--light)] p-6 rounded-xl shadow-md transition-all duration-300 card-hover" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-[var(--primary-light)] flex items-center justify-center text-[var(--primary-dark)] mr-4">
+                <i data-feather="users" class="w-6 h-6"></i>
+              </div>
+              <h4 class="text-xl font-bold text-[var(--primary-dark)] font-serif">Salón Cultural</h3>
+            </div>
+            <p class="mb-4">Ámbito flexible para exposiciones, encuentros literarios, música de cámara y presentaciones de libros. Equipado con soporte para muestras temporales.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-[var(--primary-light)] bg-opacity-30 text-[var(--primary-dark)] rounded-full text-sm">Exposiciones</span>
+              <span class="px-3 py-1 bg-[var(--primary-light)] bg-opacity-30 text-[var(--primary-dark)] rounded-full text-sm">Literatura</span>
+              <span class="px-3 py-1 bg-[var(--primary-light)] bg-opacity-30 text-[var(--primary-dark)] rounded-full text-sm">Música</span>
+            </div>
+          </div>
+          
+          <div class="bg-[var(--light)] p-6 rounded-xl shadow-md transition-all duration-300 card-hover" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-[var(--primary-light)] flex items-center justify-center text-[var(--primary-dark)] mr-4">
+                <i data-feather="archive" class="w-6 h-6"></i>
+              </div>
+              <h4 class="text-xl font-bold text-[var(--primary-dark)] font-serif">Patrimonio y Memoria</h3>
+            </div>
+            <p class="mb-4">Área dedicada a objetos, documentos y relatos que reconstruyen la historia de Jesús María y su vínculo con la torre.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-[var(--primary-light)] bg-opacity-30 text-[var(--primary-dark)] rounded-full text-sm">Documentos</span>
+              <span class="px-3 py-1 bg-[var(--primary-light)] bg-opacity-30 text-[var(--primary-dark)] rounded-full text-sm">Objetos</span>
+              <span class="px-3 py-1 bg-[var(--primary-light)] bg-opacity-30 text-[var(--primary-dark)] rounded-full text-sm">Relatos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Info Section -->
+    <section class="py-12 bg-[var(--light)]">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div data-aos="fade-up">
+            <div class="bg-white p-6 rounded-xl shadow-md h-full">
+              <h3 class="text-xl font-bold mb-4 text-[var(--primary-dark)] font-serif">Un símbolo cultural</h3>
+              <p>Durante décadas, la torre fue espacio de reuniones sociales y culturales. Hoy funciona como museo y espacio vivo de memoria, integrando arte, historia y comunidad.</p>
+            </div>
+          </div>
+          
+          <div data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-white p-6 rounded-xl shadow-md h-full">
+              <h3 class="text-xl font-bold mb-4 text-[var(--primary-dark)] font-serif">Ficha técnica</h3>
+              <div class="space-y-2">
+                <div class="flex justify-between border-b pb-2">
+                  <span class="font-medium">Construcción</span>
+                  <span>1896–1898</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                  <span class="font-medium">Autor</span>
+                  <span>Gabriel Céspedes</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                  <span class="font-medium">Estilo</span>
+                  <span>Medieval y morisco</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                  <span class="font-medium">Función actual</span>
+                  <span>Museo y espacio cultural</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-medium">Dirección</span>
+                  <span>Cástulo Peña 387, Jesús María</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Group Services Section -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto bg-[var(--primary)] text-white p-8 rounded-xl shadow-md" data-aos="fade-up">
+          <h3 class="text-2xl font-bold mb-6 font-serif">Servicios para grupos</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="flex items-start">
+              <div class="bg-white text-[var(--primary-dark)] p-2 rounded-full mr-4">
+                <i data-feather="users" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">Visitas guiadas</h4>
+                <p class="text-sm opacity-90">Personalizadas para grupos de hasta 25 personas.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-white text-[var(--primary-dark)] p-2 rounded-full mr-4">
+                <i data-feather="book-open" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">Talleres educativos</h4>
+                <p class="text-sm opacity-90">Para escuelas primarias y secundarias.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-white text-[var(--primary-dark)] p-2 rounded-full mr-4">
+                <i data-feather="search" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">Asesoramiento</h4>
+                <p class="text-sm opacity-90">Para investigaciones locales.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-white text-[var(--primary-dark)] p-2 rounded-full mr-4">
+                <i data-feather="clock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold mb-1">Reservas</h4>
+                <p class="text-sm opacity-90">Con al menos 72 h de anticipación.</p>
+              </div>
+            </div>
+          </div>
+          
+          <a href="contacto.MuseoTorres.html#formulario-contacto" class="inline-block px-6 py-3 bg-white text-[var(--primary-dark)] font-semibold rounded-lg hover:bg-opacity-90 transition">Solicitar reserva</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--primary-dark)] text-white py-8 border-t-4 border-[var(--primary-light)]">
+    <!-- BOTÓN VOLVER ARRIBA - Se muestra cuando se hace scroll hacia abajo -->
+    <button id="scrollToTopBtn" aria-label="Volver arriba" class="fixed bottom-6 right-6 z-50 bg-[var(--primary)] text-white p-3 rounded-full shadow-lg hover:bg-[var(--primary-dark)] transition hidden">
+      <i data-feather="arrow-up"></i>
+    </button>
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h4 class="text-lg font-bold mb-4 font-serif">Museo Torre Céspedes</h4>
+          <div class="space-y-2">
+            <div class="flex items-center">
+              <i data-feather="map-pin" class="mr-2"></i>
+              <span>Cástulo Peña 387, Jesús María, Córdoba</span>
+            </div>
+            <div class="flex items-center">
+              <i data-feather="phone" class="mr-2"></i>
+              <span>(03525) 443773 · WhatsApp: 3525-539012</span>
+            </div>
+            <div class="flex items-center">
+              <i data-feather="mail" class="mr-2"></i>
+              <span>turismo@jesusmaria.gov.ar</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex flex-col items-center md:items-start">
+          <h4 class="text-lg font-bold mb-4 font-serif">Seguinos</h4>
+          <div class="flex space-x-4">
+            <a href="https://www.facebook.com/torrecespedes/mentions?locale=es_LA" target="_blank" class="hover:text-[var(--primary-light)] transition">
+              <i data-feather="facebook" class="w-6 h-6"></i>
+            </a>
+            <a href="https://www.instagram.com/turismojesusmaria?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:text-[var(--primary-light)] transition">
+              <i data-feather="instagram" class="w-6 h-6"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="text-center md:text-right">
+          <p>© 2025 Museo Torre Céspedes · Jesús María</p>
+          <p class="text-sm text-[var(--primary-light)] mt-2">Sitio web realizado por el área de Cultura</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script src="mobile_menu.js"></script>
+<script src="script.MuseoTorres.js"></script>
+</body>
+</html>

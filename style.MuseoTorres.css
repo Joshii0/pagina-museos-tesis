@@ -1,0 +1,163 @@
+/* HOJA DE ESTILOS DEL MUSEO TORRE CÉSPEDES */
+/* Estilos personalizados para complementar Tailwind CSS y definir la identidad visual del sitio */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* PALETA DE COLORES - Variables CSS personalizadas */
+/* Importancia: Alta - Centraliza la identidad visual del museo */
+:root {
+  /* Colores principales inspirados en la arquitectura histórica */
+  --primary: #8B5E3C;        /* Color principal - marrón histórico - Importante para branding */
+  --primary-light: #D8B48A;   /* Color claro para acentos - Importante para contrastes */
+  --primary-dark: #5A3921;    /* Color oscuro para contrastes - Importante para elementos destacados */
+  --secondary: #3D2F22;       /* Color secundario para texto - Importante para legibilidad */
+  --light: #FFF8EF;           /* Color claro para fondos - Importante para fondos claros */
+  --bg: #F6EFE6;              /* Color de fondo principal - Importante para atmósfera */
+}
+
+/* CONFIGURACIÓN GLOBAL - Tipografía y colores base */
+/* Importancia: Alta - Establece la identidad visual base del sitio */
+body {
+  font-family: 'Poppins', sans-serif;    /* Fuente moderna para texto general - Importante para legibilidad */
+  background-color: var(--bg);           /* Fondo cálido y acogedor - Importante para atmósfera */
+  color: var(--secondary);               /* Color de texto principal - Importante para contraste */
+}
+
+/* TIPOGRAFÍA - Fuentes para encabezados */
+/* Importancia: Media - Mejora jerarquía visual */
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;  /* Fuente elegante para títulos - Importante para branding */
+}
+
+/* LOGO - Círculo con gradiente radial */
+/* Importancia: Alta - Elemento distintivo del branding */
+.logo-circle {
+  background: radial-gradient(circle at 30% 30%, #ffe7c4, #b37a52);
+  /* Gradiente que simula el efecto de luz en la torre histórica - Importante para identidad visual */
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,.25);
+  /* Sombra interna para efecto de profundidad - Importante para realismo */
+}
+
+/* NAVEGACIÓN - Efectos hover para enlaces */
+/* Importancia: Media - Mejora interacción del usuario */
+.nav-link {
+  transition: all 0.3s ease;  /* Transición suave para efectos - Importante para UX */
+}
+.nav-link:hover {
+  transform: translateY(-2px);  /* Efecto de elevación al pasar el mouse - Importante para feedback visual */
+}
+
+/* TARJETAS - Efecto hover para elementos interactivos */
+/* Importancia: Media - Mejora interactividad visual */
+.card-hover:hover {
+  transform: translateY(-5px);  /* Elevación más pronunciada - Importante para feedback */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  /* Sombra profunda para efecto de flotación - Importante para profundidad */
+}
+
+/* GALERÍA - Grid responsivo para imágenes */
+/* Importancia: Alta - Asegura layout responsivo */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Grid que se adapta automáticamente al tamaño de pantalla - Importante para responsive */
+  gap: 1.5rem;  /* Espacio entre elementos - Importante para espaciado */
+}
+
+/* ELEMENTOS DE GALERÍA - Efectos hover para imágenes */
+/* Importancia: Media - Mejora experiencia de galería */
+.gallery-item {
+  overflow: hidden;           /* Evita que el contenido se salga del contenedor - Importante para layout */
+  border-radius: 0.5rem;      /* Bordes redondeados - Importante para estética */
+  transition: all 0.3s ease;  /* Transición suave - Importante para UX */
+}
+.gallery-item:hover img {
+  transform: scale(1.05);     /* Zoom sutil al pasar el mouse - Importante para interacción */
+}
+.gallery-item img {
+  transition: transform 0.5s ease;  /* Transición suave para el zoom - Importante para animación */
+}
+
+/* ========================================
+   HERO VIDEO SECTION - Video background
+   ======================================== */
+/* Importancia: Alta - Primera impresión del sitio */
+.hero-video {
+  position: relative;
+  height: 600px; /* Altura del video - Importante para impacto visual */
+  overflow: hidden;
+}
+
+.hero-video-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* antes: cover - Importante para mantener proporción */
+  object-position: center;
+}
+
+/* Para móviles - altura reducida */
+/* Importancia: Alta - Optimización móvil */
+@media (max-width: 768px) {
+  .hero-video {
+    height: 400px; /* Altura reducida para móviles - Importante para performance */
+  }
+}
+
+/* Fallback para navegadores que no soportan video */
+/* Importancia: Media - Compatibilidad */
+.hero-video-bg[src*="mp4"] {
+  display: none; /* Oculta video si no soportado - Importante para fallback */
+}
+
+.hero-video::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('media/gallery-wide_jesus-maria-turismo-atractivos-torre-cespedes-1-5883.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Fallback con imagen - Importante para accesibilidad */
+}
+
+/* ========================================
+   CARRUSEL - Control de tamaño y apariencia
+   ======================================== */
+/* Importancia: Alta - Presentación de contenido multimedia */
+/* CONTENEDOR PRINCIPAL DEL CARRUSEL */
+.carousel-container {
+  max-height: 100%;  /* Limita la altura máxima del carrusel - Importante para consistencia */
+  min-width: 100%;
+  overflow: hidden;   /* Oculta cualquier contenido que exceda la altura - Importante para layout */
+}
+
+/* IMÁGENES DEL CARRUSEL - Control de tamaño */
+/* Importancia: Alta - Visualización uniforme */
+.carousel-item img {
+  width: 100%; /* corregido - Importante para responsive */
+  height: 600px; /* Altura fija - Importante para consistencia */
+  object-fit: cover; /* Cubre el contenedor - Importante para estética */
+  object-position: center; /* Centra la imagen - Importante para composición */
+}
+
+
+/* ========================================
+   CARRUSEL EN MÓVILES - Tamaño reducido
+   ======================================== */
+/* Importancia: Alta - Optimización móvil */
+@media (max-width: 768px) {
+  .carousel-container {
+    max-height: 250px;  /* Altura más pequeña en móviles - Importante para performance */
+  }
+
+  .carousel-item img {
+    height: 250px;      /* Altura reducida para móviles - Importante para carga rápida */
+  }
+
+  .carousel-btn {
+    width: 35px;        /* Botones más pequeños en móviles - Importante para usabilidad */
+    height: 35px;
+  }
+}

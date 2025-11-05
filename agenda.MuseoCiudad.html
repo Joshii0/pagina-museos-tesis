@@ -1,0 +1,203 @@
+<!-- PÁGINA DE AGENDA CULTURAL - Museo de la Ciudad Luis Biondi -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda – Museo de la Ciudad Luis Biondi</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="https://jesusmaria.tur.ar/frontend/images/favicon/favicon.ico">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <link rel="stylesheet" href="style.MuseoCiudad.css">
+  <!-- Mejoras de responsividad -->
+  <link rel="stylesheet" href="responsive_improvements.css">
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- ENCABEZADO - Header sticky con navegación -->
+    <!-- Se mantiene fijo en la parte superior durante el scroll -->
+    <header class="sticky top-0 z-50 bg-[var(--primary)] bg-opacity-95 backdrop-blur-md border-b-4 border-[var(--primary-light)]">
+      <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+        <!-- LOGO Y TÍTULO DEL MUSEO -->
+        <div class="flex items-center space-x-3">
+          <div class="logo-circle w-10 h-10 rounded-full"></div>
+          <h1 class="text-white text-xl font-bold font-serif">Museo de la Ciudad Luis Biondi</h1>
+        </div>
+        <!-- NAVEGACIÓN PRINCIPAL - Visible solo en desktop -->
+        <nav class="hidden md:flex items-center space-x-2">
+          <a href="portal-museos.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Turismo Jesús María</a>
+          <a href="index.MuseoCiudad.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Inicio</a>
+          <a href="historia.MuseoCiudad.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Historia</a>
+          <a href="agenda.MuseoCiudad.html" class="nav-link px-4 py-2 text-white font-semibold bg-white bg-opacity-20 rounded-full">Agenda</a>
+          <a href="contacto.MuseoCiudad.html" class="nav-link px-4 py-2 text-white font-semibold hover:bg-white hover:bg-opacity-20 rounded-full">Contacto</a>
+          <span class="text-white px-2">|</span>
+          <a href="" class="nav-link px-3 py-1 text-white text-sm font-medium hover:underline">EN</a>
+        </nav>
+        <!-- BOTÓN DE MENÚ MÓVIL - Solo visible en dispositivos pequeños -->
+        <button class="md:hidden text-white">
+          <i data-feather="menu"></i>
+        </button>
+      </div>
+    </header>
+
+  <main class="flex-grow">
+    <!-- SECCIÓN HERO - Introducción a la agenda cultural -->
+    <!-- Fondo de color primario con texto blanco centrado -->
+    <section class="bg-[var(--primary)] text-white py-16">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-4 font-serif" data-aos="fade-up">Agenda Cultural</h2>
+        <p class="text-xl max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Descubrí las actividades y eventos del Museo de la Ciudad Luis Biondi.
+        </p>
+      </div>
+    </section>
+
+    <!-- LISTA DE EVENTOS -->
+    <section class="py-12 bg-[var(--light)]">
+      <div class="container mx-auto px-4">
+        <h3 class="text-2xl font-bold mb-8 text-center text-[var(--primary-dark)] font-serif" data-aos="fade-up">Próximos Eventos</h3>
+        <div class="max-w-4xl mx-auto space-y-6" id="lista-eventos">
+          <!-- EJEMPLO EVENTO -->
+          <div class="bg-white p-6 rounded-xl shadow-md event-card" data-aos="fade-up">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div>
+                <h4 class="text-xl font-bold text-[var(--primary-dark)] font-serif">Se viene una nueva noche de Astroturismo Cultural en el Parque Ecológico Riberas Oeste</h4>
+                <div class="flex items-center text-[var(--primary)] mt-1 mb-3">
+                  <i data-feather="calendar" class="w-4 h-4 mr-2"></i>
+                  <span>31 de enero, desde las 21:30 horas</span>
+                </div>
+                <p>La Municipalidad de Jesús María propone una nueva noche de Astroturismo Cultural en el Parque Ecológico Riberas Oeste. Esta aventura nocturna buscará concientizar y sensibilizar a los asistentes sobre el patrimonio existente en nuestro cielo.</p>
+              </div>
+              <a href="https://jesusmaria.tur.ar/novedades/eventos/se-viene-una-nueva-noche-de-astroturismo-cultural-en-el-parque-ecologico-riberas-oeste.html" class="md:self-start px-6 py-2 bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white font-semibold rounded-lg transition whitespace-nowrap">Más información</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTOS PASADOS Y DESTACADOS -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <h3 class="text-2xl font-bold mb-8 text-center text-[var(--primary-dark)] font-serif" data-aos="fade-up">Eventos Pasados y Destacados</h3>
+        <!-- GRID DE EVENTOS PASADOS - Dos columnas en desktop -->
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- EVENTO PASADO 1 -->
+          <div class="bg-[var(--light)] p-6 rounded-xl shadow-md" data-aos="fade-up">
+            <h4 class="text-xl font-bold text-[var(--primary-dark)] font-serif mb-2">Ciclo de charlas históricas</h4>
+            <div class="flex items-center text-[var(--primary)] mb-2">
+              <i data-feather="calendar" class="w-4 h-4 mr-2"></i>
+              <span>15 de abril 2025 · 18:00</span>
+            </div>
+            <p>Expertos locales compartieron investigaciones sobre la historia de Jesús María y su impacto en la comunidad.</p>
+          </div>
+          <!-- EVENTO PASADO 2 -->
+          <div class="bg-[var(--light)] p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+            <h4 class="text-xl font-bold text-[var(--primary-dark)] font-serif mb-2">Festival de música en el museo</h4>
+            <div class="flex items-center text-[var(--primary)] mb-2">
+              <i data-feather="calendar" class="w-4 h-4 mr-2"></i>
+              <span>28 de marzo 2025 · 20:00</span>
+            </div>
+            <p>Artistas regionales ofrecieron un espectáculo musical al aire libre, celebrando la cultura y el patrimonio local.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS PARA GRUPOS -->
+<section class="py-12 bg-[var(--primary)] text-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+      <h3 class="text-2xl font-bold mb-4 font-serif">Servicios para Grupos</h3>
+      <p class="mb-8 max-w-2xl mx-auto">
+        Facilitamos recorridos y actividades educativas para grupos, escuelas y visitantes especiales. Coordiná tu visita y viví una experiencia dirigida.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+          <i data-feather="users" class="w-8 h-8 mx-auto mb-4"></i>
+          <h4 class="font-bold mb-2">Visitas guiadas</h4>
+          <p>
+            Recorridos con guías locales que contextualizan la historia, cultura y patrimonio del museo.  
+          </p>
+        </div>
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+          <i data-feather="book-open" class="w-8 h-8 mx-auto mb-4"></i>
+          <h4 class="font-bold mb-2">Talleres culturales</h4>
+          <p>
+            Actividades con temática cultural o artística vinculadas al museo; se organizan talleres públicos regularmente.  
+          </p>
+        </div>
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+          <i data-feather="calendar" class="w-8 h-8 mx-auto mb-4"></i>
+          <h4 class="font-bold mb-2">Coordinación previa</h4>
+          <p>
+            Para grupos o escuelas, se recomienda coordinar la visita con antelación para asegurar horarios y atención.  
+          </p>
+        </div>
+      </div>
+      <a href="contacto.MuseoCiudad.html#formulario-contacto" class="inline-block px-8 py-3 bg-white text-[var(--primary-dark)] font-bold rounded-lg hover:bg-gray-100 transition">
+        Coordinar visita
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+  <footer class="bg-[var(--primary-dark)] text-white py-8 border-t-4 border-[var(--primary-light)]">
+  <!-- BOTÓN VOLVER ARRIBA - Se muestra cuando se hace scroll hacia abajo -->
+  <button id="scrollToTopBtn" aria-label="Volver arriba" class="fixed bottom-6 right-6 z-50 bg-[var(--primary)] text-white p-3 rounded-full shadow-lg hover:bg-[var(--primary-dark)] transition hidden">
+    <i data-feather="arrow-up"></i>
+  </button>
+  
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Info Museo -->
+      <div>
+        <h4 class="text-lg font-bold mb-4 font-serif">Museo de la Ciudad Luis Biondi</h4>
+        <div class="space-y-2">
+          <div class="flex items-center">
+            <i data-feather="map-pin" class="mr-2"></i>
+            <span>Ingeniero Olmos 453, Jesús María, Córdoba</span>
+          </div>
+          <div class="flex items-center">
+            <i data-feather="phone" class="mr-2"></i>
+            <span>(03525) 443760 · WhatsApp: +54 9 3525 539012</span>
+          </div>
+          <div class="flex items-center">
+            <i data-feather="mail" class="mr-2"></i>
+            <span>turismo@jesusmaria.gov.ar</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Redes sociales -->
+      <div class="flex flex-col items-center md:items-start">
+        <h4 class="text-lg font-bold mb-4 font-serif">Seguinos</h4>
+        <div class="flex space-x-4">
+          <a href="https://www.facebook.com/museodelaciudad.luisbiondi/?locale=es_LA" target="_blank" class="hover:text-[var(--primary-light)] transition">
+            <i data-feather="facebook" class="w-6 h-6"></i>
+          </a>
+          <a href="https://www.instagram.com/explore/locations/1008940069/museo-de-la-ciudad-luis-biondi/" target="_blank" class="hover:text-[var(--primary-light)] transition">
+            <i data-feather="instagram" class="w-6 h-6"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Créditos -->
+      <div class="text-center md:text-right">
+        <p>© 2025 Museo de la Ciudad Luis Biondi · Jesús María</p>
+        <p class="text-sm text-[var(--primary-light)] mt-2">Sitio web realizado por el Área de Cultura de Jesús María</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="mobile_menu.js"></script>
+<script src="script.MuseoCiudad.js"></script>
+</body>
+</html>
